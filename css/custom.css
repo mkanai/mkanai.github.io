@@ -55,6 +55,9 @@ a.navbar-text {
   margin-left: 0px;
   margin-right: 0px; }
 
+a:hover {
+  text-decoration: underline; }
+
 .tag {
   display: inline-block;
   padding: 0 21px;
@@ -86,7 +89,7 @@ a.navbar-text {
 ol.bibliography li span strong {
   font-weight: 900; }
 
-ol.bibliography li span i {
+i.journal {
   color: #2980B9; }
 
 footer ul {
