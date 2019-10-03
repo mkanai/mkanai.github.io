@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "top.css",
+	"sources": [
+		"top.scss"
+	],
+	"sourcesContent": [
+		"h2,\n.h2 {\n  font-size: 40px;\n}\nh3,\n.h3 {\n  font-size: 29px;\n}\nh3 {\n  font-weight: normal;\n  margin-top: 15px;\n  margin-bottom: 15px;\n}\n\n@media screen and (max-width:475px) {\n  h2,\n  .h2 {\n    font-size: 29px;\n  }\n  h3,\n  .h3 {\n    font-size: 24px;\n  }\n  .lead {\n    font-size: 18px;\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,EAAE,EACF,GAAG,CAAC,EACF,SAAS,EAAE,IAAI,GAChB;;AACD,AAAA,EAAE,EACF,GAAG,CAAC,EACF,SAAS,EAAE,IAAI,GAChB;;AACD,AAAA,EAAE,CAAC,EACD,WAAW,EAAE,MAAM,EACnB,UAAU,EAAE,IAAI,EAChB,aAAa,EAAE,IAAI,GACpB;;AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,IACjC,AAAA,EAAE,EACF,GAAG,CAAC,EACF,SAAS,EAAE,IAAI,GAChB;EACD,AAAA,EAAE,EACF,GAAG,CAAC,EACF,SAAS,EAAE,IAAI,GAChB;EACD,AAAA,KAAK,CAAC,EACJ,SAAS,EAAE,IAAI,GAChB"
+}

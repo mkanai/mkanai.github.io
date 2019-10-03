@@ -1,127 +1,60 @@
 /* cf: https://speakerdeck.com/tacamy/modanri-ben-yu-huontozhi-ding */
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 100;
-  src: local("YuGothic-Light"), local("Yu Gothic Light"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 200;
-  src: local("YuGothic-Light"), local("Yu Gothic Light"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 300;
-  src: local("YuGothic-Regular"), local("Yu Gothic"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 400;
-  src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 500;
-  src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 600;
-  src: local("YuGothic-Bold"), local("Yu Gothic"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 700;
-  src: local("YuGothic-Bold"), local("Yu Gothic"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 800;
-  src: local("YuGothic-Bold"), local("Yu Gothic"); }
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: 900;
-  src: local("YuGothic-Bold"), local("Yu Gothic"); }
-body {
-  font-family: Lato, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 100; src: local("YuGothic-Light"), local("Yu Gothic Light"); }
 
-html, body {
-  height: 100%; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 200; src: local("YuGothic-Light"), local("Yu Gothic Light"); }
 
-#wrap {
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto -35px;
-  padding: 0 0 35px; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 300; src: local("YuGothic-Regular"), local("Yu Gothic"); }
 
-img {
-  max-width: 100%;
-  height: auto; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 400; src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular"); }
 
-a.navbar-text {
-  margin-left: 0px;
-  margin-right: 0px; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 500; src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular"); }
 
-a:hover {
-  text-decoration: underline; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 600; src: local("YuGothic-Bold"), local("Yu Gothic"); }
 
-.tag {
-  display: inline-block;
-  padding: 0 21px;
-  margin: 0 5px 5px 0;
-  color: #fff;
-  vertical-align: middle;
-  background-color: #5dade2;
-  border-radius: 4px; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 700; src: local("YuGothic-Bold"), local("Yu Gothic"); }
 
-.text-muted {
-  color: #7F8C8D; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 800; src: local("YuGothic-Bold"), local("Yu Gothic"); }
 
-.icon-text {
-  margin-left: 4px;
-  font-weight: 400; }
+@font-face { font-family: "MyYuGothicM"; font-weight: 900; src: local("YuGothic-Bold"), local("Yu Gothic"); }
 
-.btn .icon-text {
-  font-family: Lato, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif; }
+body { font-family: Lato, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif; }
 
-.btn-xs {
-  padding: 4px 9px;
-  font-size: 14px;
-  line-height: 1; }
+html, body { height: 100%; }
 
-.dl-horizontal dt {
-  text-align: left;
-  width: 180px; }
+#wrap { min-height: 100%; height: auto; margin: 0 auto -35px; padding: 0 0 35px; }
 
-ol.bibliography li span strong {
-  font-weight: 900; }
+img { max-width: 100%; height: auto; }
 
-i.journal {
-  color: #2980B9; }
+a.navbar-text { margin-left: 0px; margin-right: 0px; }
 
-footer ul {
-  margin-bottom: 5px; }
+a:hover { text-decoration: underline; }
 
-@media screen and (max-width: 550px) {
-  .hide-small {
-    display: none !important; } }
-@media screen and (max-width: 475px) {
-  body {
-    font-size: 16px; }
+.tag { display: inline-block; padding: 0 21px; margin: 0 5px 5px 0; color: #fff; vertical-align: middle; background-color: #5dade2; border-radius: 4px; }
 
-  h1,
-  .h1 {
-    font-size: 40px; }
+.text-muted { color: #7F8C8D; }
 
-  h2,
-  .h2 {
-    font-size: 29px; }
+.icon-text { margin-left: 4px; font-weight: 400; }
 
-  h3,
-  .h3 {
-    font-size: 28px; }
+.btn .icon-text { font-family: Lato, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif; }
 
-  h4,
-  .h4 {
-    font-size: 24px; }
+.btn-xs { padding: 4px 9px; font-size: 14px; line-height: 1; }
 
-  h5,
-  .h5 {
-    font-size: 18px; }
+.dl-horizontal dt { text-align: left; width: 180px; }
 
-  h6,
-  .h6 {
-    font-size: 16px; } }
+ol.bibliography li span strong { font-weight: 900; }
+
+i.journal { color: #2980B9; }
+
+footer ul { margin-bottom: 5px; }
+
+@media screen and (max-width: 550px) { .hide-small { display: none !important; } }
+
+@media screen and (max-width: 475px) { body { font-size: 16px; }
+  h1, .h1 { font-size: 40px; }
+  h2, .h2 { font-size: 29px; }
+  h3, .h3 { font-size: 28px; }
+  h4, .h4 { font-size: 24px; }
+  h5, .h5 { font-size: 18px; }
+  h6, .h6 { font-size: 16px; } }
+
+/*# sourceMappingURL=custom.css.map */

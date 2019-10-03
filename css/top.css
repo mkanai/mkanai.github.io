@@ -1,24 +1,11 @@
-h2,
-.h2 {
-  font-size: 40px; }
+h2, .h2 { font-size: 40px; }
 
-h3,
-.h3 {
-  font-size: 29px; }
+h3, .h3 { font-size: 29px; }
 
-h3 {
-  font-weight: normal;
-  margin-top: 15px;
-  margin-bottom: 15px; }
+h3 { font-weight: normal; margin-top: 15px; margin-bottom: 15px; }
 
-@media screen and (max-width: 475px) {
-  h2,
-  .h2 {
-    font-size: 29px; }
+@media screen and (max-width: 475px) { h2, .h2 { font-size: 29px; }
+  h3, .h3 { font-size: 24px; }
+  .lead { font-size: 18px; } }
 
-  h3,
-  .h3 {
-    font-size: 24px; }
-
-  .lead {
-    font-size: 18px; } }
+/*# sourceMappingURL=top.css.map */
