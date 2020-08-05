@@ -163,7 +163,7 @@ layout: default
 
     <div id="publications">
       <h2>Publications</h2>
-      <p>&#9702; <a href={{site.author.gscholar}} target="_blank" rel="noopener">Google Scholar</a> &#9702; <a href="https://orcid.org/{{ site.author.orcid }}" target="_blank" rel="noopener">ORCID</a></p>
+      <p>&#9702; <a href={{site.author.gscholar}} target="_blank" rel="noopener">Google Scholar</a> &#9702; <a href="https://orcid.org/{{ site.author.orcid }}" target="_blank" rel="noopener">ORCID</a> &#9702; <a href={{site.author.pubmed}} target="_blank" rel="noopener">PubMed</a></p>
       <h3>Selected Publications and Preprints</h3>
       <p>(* = co-first)</p>
       {% bibliography --query @*[keywords=selected] --label split --label start %}
