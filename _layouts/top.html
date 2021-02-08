@@ -91,28 +91,6 @@ layout: default
     </div>
     {% endif %}
 
-    {% if site.data.interests[page.lang] %}
-    <div id="interests">
-      <h2>Research Interests</h2>
-      <ul class="list-inline">
-        {% for interest in site.data.interests[page.lang] %}
-        <li><span class="tag">{{ interest }}</span></li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-    {% if site.data.skills[page.lang] %}
-    <div id="skills">
-      <h2>Technical Skills</h2>
-      <ul class="list-inline">
-        {% for skill in site.data.skills[page.lang] %}
-        <li><span class="tag">{{ skill }}</span></li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
     {% if site.data.awards[page.lang] %}
     <div id="awards">
       <h2>Awards and Fellowships</h2>
