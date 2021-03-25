@@ -7,19 +7,26 @@ title: Software & Data
 
 --------
 
+* {% smooth_scroll [\*Sakaue, S., \*Kanai, M. *et al.*, *medRxiv* (2020)](sakaue-s-kanai-m-et-al-medrxiv-2020) %}
 * {% smooth_scroll [Kanai, M. *et al.*, *Nat. Genet.* (2018)](kanai-m-et-al-nat-genet-2018) %}
 * {% smooth_scroll [Kanai, M. *et al.*, *J. Hum. Genet.* (2016)](kanai-m-et-al-j-hum-genet-2016) %}
 * {% smooth_scroll [R packages](r-packages) %}
   * {% smooth_scroll [Grimon (Kanai, M. *et al.*, *Bioinformatics*, 2018)](grimon) %}
 
 --------
+## \*Sakaue, S., \*Kanai, M. *et al.*, *medRxiv* (2020)
+
+{% reference Sakaue2020c -f publications.bib %}
+
+* BioBank Japan PheWeb browser is available at [PheWeb.jp](https://pheweb.jp/).
+* GWAS summary statistics of 220 complex diseases and traits are available at [the NBDC Human Database](https://humandbs.biosciencedbc.jp/en/hum0197-latest#hum0197.v3.gwas.v1).
+
 
 ## Kanai, M. *et al.*, *Nat. Genet.* (2018)
 
 {% reference Kanai2018a -f publications.bib %}
 
-* GWAS summary statistics of 58 quantitative traits are available at [JENGER](http://jenger.riken.jp/en/result) (**J**apanese **EN**cyclopedia of **GE**netic associations by **R**iken).
-* They are also browsable through our [PheWeb](http://jenger.riken.jp/pheweb/) for the BioBank Japan GWAS results.
+* GWAS summary statistics of 58 quantitative traits are available at [the NBDC Human Database](https://humandbs.biosciencedbc.jp/hum0014-latest#58qt).
 
 ### Analyzed traits
 <img src="/img/Kanai2018_study_design.svg" alt="Study design" style="max-width:992px">
@@ -413,7 +420,7 @@ Cell-type specificity network was designed to summarize cell-type specific enric
 
 
 ### Links
-* [JENGER](http://jenger.riken.jp/en/result)
+* [the NBDC Human Database](https://humandbs.biosciencedbc.jp/hum0014-latest#58qt)
 * [The Biobank Japan Project](https://biobankjp.org/english/)
 * [PLINK 1.9](https://www.cog-genomics.org/plink2)
 * [ldsc](https://github.com/bulik/ldsc)
