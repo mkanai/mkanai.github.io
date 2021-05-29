@@ -5,5 +5,8 @@ $(document).ready(function() {
     $('a.bibtex').click(function() {
         $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
     });
+    $('a.coauthor').click(function() {
+        $(this).parent().find(".coauthor.etal").toggleClass('visible');
+    });
     $('.navbar-nav').find('a').removeClass('waves-effect waves-light');
 });

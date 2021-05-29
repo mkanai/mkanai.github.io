@@ -10,6 +10,7 @@
     <abbr class="badge">{{entry.abbr}}</abbr>
     {% endif %}
   {% endif %}
+  {{index}}
   </div>
 
   <div id="{{entry.key}}" class="col-sm-8">
@@ -38,24 +39,41 @@
           
           {% if forloop.length == 1 %}
             {% if author_is_self %}
-              <strong>{{author.rendered}}</strong>
+              <em>{{author.rendered}}</em>
             {% else %}
               {{author.rendered}}
             {% endif %}
           {% else %}
             {% unless forloop.last %}
               {% if author_is_self %}
-                <strong>{{author.rendered}}</strong>
-              {% else %}
-                {% if coauthor_url %}
-                  <a href="{{coauthor_url}}" target="_blank">{{author.rendered}}</a>,
-                {% else %}
-                  {{author.rendered}},
+                <em>{{author.rendered}}</em>,
+                {% if etal_button_rendered %}
+                  <a class="coauthor etal visible" role="button">...,</a>
                 {% endif %}
+              {% elsif forloop.index <= 3 %}
+                <span class="coauthor">
+                  {% if coauthor_url %}
+                    <a href="{{coauthor_url}}" target="_blank">{{author.rendered}}</a>,
+                  {% else %}
+                    {{author.rendered}},
+                  {% endif %}
+                </span>
+              {% else %}
+                {% unless etal_button_rendered %}
+                  <a class="coauthor etal visible" role="button">...,</a>
+                  {% assign etal_button_rendered = true %}
+                {% endunless %}
+                <span class="coauthor etal">
+                  {% if coauthor_url %}
+                    <a href="{{coauthor_url}}" target="_blank">{{author.rendered}}</a>,
+                  {% else %}
+                    {{author.rendered}},
+                  {% endif %}
+                </span>
               {% endif %}
             {% else %}
               {% if author_is_self %}
-                and <strong>{{author.rendered}}</strong>
+                and <em>{{author.rendered}}</em>
               {% else %}
                 {% if coauthor_url %}
                   and <a href="{{coauthor_url}}" target="_blank">{{author.rendered}}</a>
@@ -66,6 +84,10 @@
             {% endunless %}
           {% endif %}
         {% endfor %}
+        {% if etal_button_rendered %}
+          <a class="coauthor etal" role="button">[Show fewer authors]</a>
+        {% endif %}
+        {% assign etal_button_rendered = false %}
       </div>
 
       <div class="periodical">

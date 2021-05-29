@@ -102,7 +102,7 @@ module Jekyll
     #     content_tag reference_tagname, reference,
     #       :id => [prefix, entry.key].compact.join('-')
     #   end
-    # end
+    end
 
     # class BibliographyTag < Liquid::Tag
     #   include Scholar::Utilities
@@ -133,7 +133,7 @@ module Jekyll
     #       { :class => config['bibliography_class'] }.merge(bibliography_list_attributes)
 
     #   end
-    end
+    # end
   end
 end
 

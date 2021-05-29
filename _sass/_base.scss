@@ -413,8 +413,18 @@ footer.sticky-bottom {
           }
         }
         > em {
-          border-bottom: 1px solid;
+          font-weight: bold;
+          // border-bottom: 1px solid;
           font-style: normal;
+          // color: var(--global-theme-color);
+        }
+        .coauthor.etal {
+          display: none;
+          visibility: hidden;
+        }
+        .coauthor.etal.visible {
+          display: inline;
+          visibility: visible;
         }
       }
       .links {
