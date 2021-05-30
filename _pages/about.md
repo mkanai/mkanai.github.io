@@ -1,8 +1,8 @@
 ---
 layout: about
-title: About
+title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: PhD candidate in <a href="http://www.hms.harvard.edu/dms/big/" target="_blank" rel="noopener">the Bioinformatics and Integrative Genomics Program</a>, Harvard Medical School.
 
 profile:
   align: right

@@ -93,6 +93,7 @@ a, table.table a {
     &:hover {
       text-decoration: none;
     }
+    text-transform: capitalize;
   }
   .navbar-brand {
     color: var(--global-text-color);
@@ -204,6 +205,7 @@ a, table.table a {
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+  text-align: center;
   .container {
     color: var(--global-footer-text-color);
     padding-top: 9px;
@@ -402,7 +404,10 @@ footer.sticky-bottom {
         }
       }
       .title {
-        font-weight: bolder;
+        a {
+          font-weight: bolder;
+          color: var(--global-text-color);
+        }
       }
       .author {
         a {
@@ -416,6 +421,7 @@ footer.sticky-bottom {
           font-weight: bold;
           // border-bottom: 1px solid;
           font-style: normal;
+          color: var(--global-theme-color);
         }
         .coauthor.etal {
           display: none;
@@ -428,8 +434,8 @@ footer.sticky-bottom {
       }
       .periodical {
         > em {
-          font-weight: 400;
-          color: $green-color;
+          font-weight: bolder;
+          color: var(--global-secondary-theme-color);
         }
       }
       .links {
