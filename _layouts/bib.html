@@ -10,14 +10,13 @@
     <abbr class="badge">{{entry.abbr}}</abbr>
     {% endif %}
   {% endif %}
-  {{index}}
   </div>
 
   <div id="{{entry.key}}" class="col-sm-8">
     {% if entry.type == "thesis" %}
       {{reference}}
     {% else %}
-      <div class="title"><a href="http://dx.doi.org/{{entry.doi}}" target="_blank" rel="noopener">{{entry.title}}</a></div>
+      <div class="title"><a href="https://dx.doi.org/{{entry.doi}}" target="_blank" rel="noopener">{{entry.title}}</a></div>
       <div class="author">
         {% for author in entry.author_array %}
           {% assign author_is_self = false %}
@@ -93,24 +92,33 @@
       <div class="periodical">
       {% if entry.type == "article" %}
         <em>{{entry.journal}}</em>
+        {% if entry.volume %}
+        <b>{{entry.volume}}</b>,
+        {% endif %}
+        {% if entry.pages %}
+        {{entry.pages}}
+        {% endif %}
       {% elsif entry.type == "inproceedings" %}
         <em>In {{entry.booktitle}}</em>
       {% endif %}
       {% if entry.year %}
-        {{entry.year}}
+        ({{entry.year}})
       {% endif %}
       </div>
     {% endif %}
 
     <div class="links">
     {% if entry.abstract %}
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
     {% endif %}
     {% if entry.arxiv %}
       <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
     {% endif %}
     {% if entry.html %}
       <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button" target="_blank">HTML</a>
+    {% endif %}
+    {% if entry.journal == "bioRxiv" or entry.journal == "medRxiv" %}
+    <a href="https://dx.doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
     {% endif %}
     {% if entry.pdf %}
       {% if entry.pdf contains '://' %}
@@ -125,6 +133,15 @@
       {% else %}
       <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Supp</a>
       {% endif %}
+    {% endif %}
+    {% if entry.pubmed %}
+      <a href="https://www.ncbi.nlm.nih.gov/pubmed/{{ entry.pubmed }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
+    {% endif %}
+    {% if entry.biorxiv %}
+      <a href="https://dx.doi.org/{{ entry.biorxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">bioRxiv</a>
+    {% endif %}
+    {% if entry.medrxiv %}
+      <a href="https://dx.doi.org/{{ entry.medrxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">medRxiv</a>
     {% endif %}
     {% if entry.blog %}
       <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Blog</a>

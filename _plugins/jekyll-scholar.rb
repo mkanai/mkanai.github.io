@@ -104,36 +104,36 @@ module Jekyll
     #   end
     end
 
-    # class BibliographyTag < Liquid::Tag
-    #   include Scholar::Utilities
+    class BibliographyTag < Liquid::Tag
+      include Scholar::Utilities
 
-    #   def render_items(items)
-    #     bibliography = items.compact.each_with_index.map { |entry, index|
-    #       reference = bibliography_tag(entry, index + 1)
+      def render_items(items)
+        bibliography = items.compact.each_with_index.map { |entry, index|
+          reference = bibliography_tag(entry, index + 1)
 
-    #       if generate_details?
-    #         reference << link_to(details_link_for(entry),
-    #           config['details_link'], :class => config['details_link_class'])
-    #       end
+          if generate_details?
+            reference << link_to(details_link_for(entry),
+              config['details_link'], :class => config['details_link_class'])
+          end
 
-    #       content_tag config['bibliography_item_tag'], reference, config['bibliography_item_attributes']
-    #     }.join("\n")
+          content_tag config['bibliography_item_tag'], reference, config['bibliography_item_attributes']
+        }.join("\n")
 
-    #     bibliography_list_attributes = config['bibliography_list_attributes']
-    #     if labels.include? "split"
-    #       if labels.include? "start"
-    #         @@split_counter = items.length
-    #       else
-    #         bibliography_list_attributes = bibliography_list_attributes.merge({"start": @@split_counter + 1})
-    #         @@split_counter += items.length
-    #       end
-    #     end
+        bibliography_list_attributes = config['bibliography_list_attributes']
+        if labels.include? "split"
+          if labels.include? "start"
+            @@split_counter = items.length
+          else
+            bibliography_list_attributes = bibliography_list_attributes.merge({"start": @@split_counter + 1})
+            @@split_counter += items.length
+          end
+        end
 
-    #     content_tag bibliography_list_tag, bibliography,
-    #       { :class => config['bibliography_class'] }.merge(bibliography_list_attributes)
+        content_tag bibliography_list_tag, bibliography,
+          { :class => config['bibliography_class'] }.merge(bibliography_list_attributes)
 
-    #   end
-    # end
+      end
+    end
   end
 end
 
