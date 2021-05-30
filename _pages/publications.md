@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: publications
 description:
-years: [2021, 2020, 2019, 2018, 2017, 2016, 2015]
+years: ["Preprints", 2021, 2020, 2019, 2018, 2017, 2016, 2015]
 nav: true
 ---
 
@@ -18,10 +18,10 @@ nav: true
 
 {% for y in page.years %}
   <h2 class="year">{{y}}</h2>
-  {% if y == 2021 %}
-    {% bibliography -f publications -q @*[year={{y}}]* --label split --label start %}
+  {% if y == "Preprints" %}
+    {% bibliography -f publications -q @*[journal~=Rxiv$] --label reset %}
   {% else %}
-    {% bibliography -f publications -q @*[year={{y}}]* --label split %}
+    {% bibliography -f publications -q @*[year={{y}} && journal!~Rxiv$] %}
   {% endif %}
 {% endfor %}
 

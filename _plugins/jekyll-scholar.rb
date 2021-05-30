@@ -120,17 +120,15 @@ module Jekyll
         }.join("\n")
 
         bibliography_list_attributes = config['bibliography_list_attributes']
-        if labels.include? "split"
-          if labels.include? "start"
-            @@split_counter = items.length
-          else
-            bibliography_list_attributes = bibliography_list_attributes.merge({"start": @@split_counter + 1})
-            @@split_counter += items.length
-          end
+
+        if labels.include? "reset"
+          bibliography_custom_class = " reset"
+        else
+          bibliography_custom_class = ""
         end
 
         content_tag bibliography_list_tag, bibliography,
-          { :class => config['bibliography_class'] }.merge(bibliography_list_attributes)
+          { :class => config['bibliography_class'] + bibliography_custom_class }.merge(bibliography_list_attributes)
 
       end
     end
