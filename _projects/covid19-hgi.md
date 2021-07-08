@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: /assets/img/7.jpg
-redirect: https://unsplash.com
+title: COVID-19 Host Genetics Initiative
+description: a project with a background image
+img: https://www.covid19hg.org/static/e307a80877502502ffff254e15f297f5/6ba37/header-transparent.png
 importance: 3
-category: works
+category: resources
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,0 +1,9 @@
+en:
+  - name: The Certification for Bioinformatics Engineers
+    details: certificated by <a href="https://www.jsbi.org/en/" target="_blank">the Japanese Society of Bioinformatics</a>
+    date: 2015
+ja:
+  - name: <a href="https://www.jsbi.org/activity/nintei/" target="_blank">バイオインフォマティクス技術者</a>
+    details: <a href="https://www.jsbi.org/" target="_blank">日本バイオインフォマティクス学会</a>
+    date: 2015
+

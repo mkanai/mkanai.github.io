@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: /assets/img/7.jpg
-redirect: https://unsplash.com
-importance: 3
-category: works
+title: PheWeb.jp
+description: a project with a background image
+img: https://pheweb.jp/static/images/phewebjp_logo.svg
+importance: 1
+category: resources
 ---
 
 Every project has a beautiful feature showcase page.

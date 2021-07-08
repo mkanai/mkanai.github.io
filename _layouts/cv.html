@@ -1,0 +1,75 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title" style="display: inline; margin-right: 1rem">Curriculum Vitae</h1>
+    <span style="font-size: 2rem"><nobr><a href="/assets/pdf/CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></nobr></span>
+  </header>
+
+  <article>
+    <section class="content-section">
+      <header class="section-header"><h2>Education</h2></header>
+      {% for item in site.data.education[page.lang] %}
+      <div class="cv-item">
+          <h3 class="cv-item-title">{{ item.name }}</h3>
+          <p class="cv-item-duration">{{ item.duration }}</p>
+          {% if item.degree %}
+          <h4 class="cv-item-details">{{ item.degree }}</h4>
+          {% endif %}
+          <p class="cv-item-copy">{{ item.summary }}</p>
+      </div>
+      {% endfor %}
+      </section>
+      
+      <section class="content-section">
+      <header class="section-header"><h2>Research Experience</h2></header>
+      {% for item in site.data.research[page.lang] %}
+      <div class="cv-item">
+          <h3 class="cv-item-title">{{ item.name }}</h3>
+          <p class="cv-item-duration">{{ item.duration }}</p>
+          {% if item.position %}
+          <h4 class="cv-item-details">{{ item.position }}</h4>
+          {% endif %}
+          {% if item.advisor %}
+          <p class="cv-item-details">Advisor: {{ item.advisor }}</p>
+          {% endif %}
+          <p class="cv-item-copy">{{ item.summary }}</p>
+      </div>
+      {% endfor %}
+      </section>
+      
+      <section class="content-section">
+      <header class="section-header"><h2>Awards and Fellowships</h2></header>
+      {% for item in site.data.awards[page.lang] %}
+      <div class="cv-item">
+          <h3 class="cv-item-title">{{ item.name }}</h3>
+          <p class="cv-item-duration">{{ item.date }}</p>
+          <p class="cv-item-details">{{ item.details }}</p>
+      </div>
+      {% endfor %}
+      </section>
+      
+      <section class="content-section">
+      <header class="section-header"><h2>Certification</h2></header>
+      {% for item in site.data.certification[page.lang] %}
+      <div class="cv-item">
+          <h3 class="cv-item-title">{{ item.name }}</h3>
+          <p class="cv-item-duration">{{ item.date }}</p>
+          <p class="cv-item-details">{{ item.details }}</p>
+      </div>
+      {% endfor %}
+      </section>
+      
+      <section class="content-section">
+      <header class="section-header"><h2>Publications</h2></header>
+      <p>Full publication list can be found <a href="/publications">here</a> or at 
+      <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a> | 
+      <a href="https://orcid.org/{{site.orcid_id}}" target="_blank" rel="noopener"><i class="ai ai-orcid"></i> ORCID</a> | 
+      <a href="{{site.pubmed_mybib}}" target="_blank" rel="noopener"><i class="ai ai-pubmed"></i> PubMed</a>.
+      </p>
+      </section>
+  </article>
+
+</div>

@@ -1,20 +1,18 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-description: PhD candidate in <a href="http://www.hms.harvard.edu/dms/big/" target="_blank" rel="noopener">the Bioinformatics and Integrative Genomics Program</a>, Harvard Medical School.
-
+lang: en
 profile:
   align: right
   image: prof_pic.jpg
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a PhD candidate in [the Bioinformatics and Integrative Genomics PhD Program](http://www.hms.harvard.edu/dms/big/){:target="\_blank"}, Harvard Medical School. Co-advised by Drs. [Mark Daly](https://www.broadinstitute.org/bios/mark-daly){:target="\_blank"} and [Hilary Finucane](https://www.broadinstitute.org/bios/hilary-finucane){:target="\_blank"}, I am working at [the Analytic and Translational Genetics Unit](https://www.atgu.mgh.harvard.edu/){:target="\_blank"}, Massachusetts General Hospital and affiliated with [the Medical and Population Genetics Program](https://www.broadinstitute.org/medical-population-genetics){:target="\_blank"}, Broad Institute of MIT and Harvard. I received fellowships from [the Nakajima Foundation](http://www.nakajimafound.or.jp/){:target="\_blank"} and [the Masason Foundation](https://masason-foundation.org/en/){:target="\_blank"}.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+As a statistical geneticist, my research focuses on cross-population analysis of complex diseases and traits to better understand their genetic architecture and diversity across multiple populations. In my thesis project, I create a comprehensive atlas of putative causal variants from multiple large-scale biobanks to gain insights from complex trait fine-mapping across diverse populations. Prior to joining ATGU, I completed B.S. degree in Japan, where I worked closely with Dr. [Yukinori Okada](http://www.sg.med.osaka-u.ac.jp/){:target="\_blank"} to study genetics of complex traits in the Japanese population using [the BioBank Japan](https://biobankjp.org/en/){:target="\_blank"} data.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My curriculum vitae can be found <span><nobr><a href="/assets/pdf/CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> here</a></nobr></span>.

@@ -1,9 +1,9 @@
 <div class="publications">
   <h2>Selected Publications and Preprints <small><a href="/publications">[full list]</a></small></h2>
   <p>Link to 
-    <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener">Google Scholar</a> | 
-    <a href="https://orcid.org/{{site.orcid.id}}" target="_blank" rel="noopener">ORCID</a> | 
-    <a href="{{site.pubmed_mybib}}" target="_blank" rel="noopener">PubMed</a>
+    <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a> | 
+    <a href="https://orcid.org/{{site.orcid_id}}" target="_blank" rel="noopener"><i class="ai ai-orcid"></i> ORCID</a> | 
+    <a href="{{site.pubmed_mybib}}" target="_blank" rel="noopener"><i class="ai ai-pubmed"></i> PubMed</a>
   </p>
   <p>* denotes equal contribution</p>
   {% bibliography -f publications --query @*[keywords=selected] %}

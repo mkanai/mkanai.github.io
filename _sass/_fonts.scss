@@ -1,0 +1,70 @@
+/* cf: https://speakerdeck.com/tacamy/modanri-ben-yu-huontozhi-ding */
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 100;
+  src: local("YuGothic-Light"),
+  local("Yu Gothic Light");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 200;
+  src: local("YuGothic-Light"),
+  local("Yu Gothic Light");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 300;
+  src: local("YuGothic-Regular"),
+  local("Yu Gothic");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 400;
+  src: local("YuGothic-Medium"),
+  local("Yu Gothic Medium"),
+  local("YuGothic-Regular");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 500;
+  src: local("YuGothic-Medium"),
+  local("Yu Gothic Medium"),
+  local("YuGothic-Regular");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 600;
+  src: local("YuGothic-Bold"),
+  local("Yu Gothic");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 700;
+  src: local("YuGothic-Bold"),
+  local("Yu Gothic");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 800;
+  src: local("YuGothic-Bold"),
+  local("Yu Gothic");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: 900;
+  src: local("YuGothic-Bold"),
+  local("Yu Gothic");
+}
+
+$font-family: Roboto,
+              -apple-system, /* OS X, iOS San Francisco */
+              BlinkMacSystemFont, /* OS X, iOS Chrome San Francisco */
+              "Hiragino Kaku Gothic ProN", /* OS X, iOS ヒラギノ */
+              MyYuGothicM, /* Windows 游ゴシック */
+              Meiryo, /* Windows メイリオ */
+              sans-serif;
+
+body {
+  font-family: $font-family;  
+}
+

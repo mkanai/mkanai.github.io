@@ -2,7 +2,7 @@
 ---
 
 <div class="row">
-  <div class="col-sm-2 abbr">
+  <div class="col-sm-1 abbr">
   {% if entry.abbr %}
     {% if site.data.venues[entry.abbr] %}
     <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
@@ -149,6 +149,9 @@
     {% if entry.code %}
       <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
     {% endif %}
+    {% if entry.data %}
+      <a href="{{ entry.data }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Data</a>
+    {% endif %}
     {% if entry.poster %}
       {% if entry.poster contains '://' %}
       <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>
@@ -166,6 +169,14 @@
     {% if entry.website %}
       <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
     {% endif %}
+    {% if entry.pr %}
+      <a href="{{ entry.pr }}" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
+    {% endif %}
+    {% if entry.doi %}
+      <div class="altmetric-badge">
+        <div data-badge-popover="bottom" data-badge-type="1" data-doi="{{ entry.doi }}" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+      </div>
+    {% endif %}
     </div>
 
     <!-- Hidden abstract block -->
@@ -174,5 +185,12 @@
       <p>{{ entry.abstract }}</p>
     </div>
     {% endif %}
+  </div>
+  <div class="col-sm-1">
+  {% if entry.doi %}
+    <div class="altmetric-donut">
+      <div data-badge-popover="right" data-badge-type="donut" data-doi="{{ entry.doi }}" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+    </div>
+  {% endif %}
   </div>
 </div>

@@ -1,0 +1,44 @@
+en:
+  - name: <a href="https://www.ashg.org/membership/awards/epstein/" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2020/08/ASHG20-Epstein-trainee.pdf" target="_blank">Finalist (Predoctoral)</a>, <a href="https://www.ashg.org/meetings/2020meeting/" target="_blank">the American Society of Human Genetics 2020 Virtual Meeting</a>
+    date: 2020
+  - name: Reviewers’ Choice Abstract Award
+    details: <a href="https://www.ashg.org/meetings/2019meeting/" target="_blank">The American Society of Human Genetics 2019 Annual Meeting</a>
+    date: 2019
+  - name: <a href="https://masason-foundation.org/en/" target="_blank">Masason Foundation Fellowship</a>
+    details: Research Grant
+    date: 2018-2022+
+  - name: <a href="http://www.nakajimafound.or.jp/" target="_blank">Nakajima Foundation Fellowship</a>
+    details: Predoctoral Fellowship
+    date: 2017-2021
+  - name: Worldwide Finals the 3rd place
+    details: <a href="https://news.microsoft.com/2011/07/13/microsoft-reveals-imagine-cup-2011-winners-unveils-3-million-grant-program/" target="_blank">Microsoft Imagine Cup 2011 Windows 7 Touch Challenge</a>
+    date: 2011
+    links:
+      - title: Video
+        url: https://www.youtube.com/watch?v=LYH6UbBgLt0
+  - name: The 1st place , National Finals & Worldwide Finalist
+    details: Microsoft Imagine Cup 2010 Software Design Competition
+    date: 2010
+ja:
+  - name: <a href="https://www.ashg.org/membership/awards/epstein/" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2020/08/ASHG20-Epstein-trainee.pdf" target="_blank">Finalist (Predoctoral)</a>, <a href="https://www.ashg.org/meetings/2020meeting/" target="_blank">アメリカ人類遺伝学会2020年大会</a>
+    date: 2020
+  - name: Reviewers’ Choice Abstract Award
+    details: <a href="https://www.ashg.org/meetings/2019meeting/" target="_blank">アメリカ人類遺伝学会2019年大会</a>
+    date: 2019
+  - name: <a href="https://masason-foundation.org/" target="_blank">孫正義育英財団</a>
+    details: 正財団生（研究費助成）
+    date: 2018-2022+
+  - name: <a href="http://www.nakajimafound.or.jp/" target="_blank">中島記念国際交流財団</a>
+    details: 日本人海外留学奨学生
+    date: 2017-2021
+  - name: Windows 7 Touch Challenge 世界第3位
+    details: <a href="https://news.microsoft.com/2011/07/13/microsoft-reveals-imagine-cup-2011-winners-unveils-3-million-grant-program/" target="_blank">Microsoft Imagine Cup 2011</a>
+    date: 2011
+    links:
+      - title: Video
+        url: https://www.youtube.com/watch?v=LYH6UbBgLt0
+  - name: Software Design Competition 日本大会優勝・世界大会出場
+    details: Microsoft Imagine Cup 2010
+    date: 2010

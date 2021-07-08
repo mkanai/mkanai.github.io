@@ -3,7 +3,7 @@
     <!-- Nav Bar -->
     <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
     <div class="container">
-      {% if page.title != "about" %}
+      {% if page.title != "About" %}
       <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl | prepend: site.url }}/">
        {% if site.title == "blank" %}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}  {{ site.last_name }}{% else %}{{ site.title }}{% endif %}
       </a>
@@ -22,11 +22,31 @@
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
+          {% if page.url contains "/ja/" %}
+            {% assign lang_ja = true %}
+            {% assign url_prefix = "/ja/" %}
+            {% assign page_url = page.url | relative_url | remove_first: "/ja" %}
+            {% assign other_lang = "English" %}
+          {% else %}
+            {% assign lang_ja = false %}
+            {% assign url_prefix = "/" %}
+            {% assign page_url = page.url | relative_url | prepend: "/ja" %}
+            {% assign other_lang = "日本語" %}
+          {% endif %}
           <!-- About -->
-          <li class="nav-item {% if page.title == 'about' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li class="nav-item {% if page.title == 'About' %}active{% endif %}">
+            <a class="nav-link" href="{{ url_prefix | relative_url }}">
               About
               {% if page.title == "about" %}
+                <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
+          <!-- CV -->
+          <li class="nav-item {% if page.title == 'CV' %}active{% endif %}">
+            <a class="nav-link" href="{{ url_prefix | append: 'cv/' | relative_url }}">
+              CV
+              {% if page.title == "CV" %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -56,6 +76,19 @@
           </li>
           {% endif %}
           {% endfor %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-globe"></i> 
+              {% if lang_ja %}
+              日本語
+              {% else %}
+              English
+              {% endif %}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="nav-link dropdown-item" href="{{ page_url | relative_url }}">{{ other_lang }}</a>
+            </div>
+          </li>
           {% if site.enable_darkmode %}
             <div class = "toggle-container">
               <a id = "light-toggle">
@@ -63,7 +96,7 @@
                   <i class="fas fa-sun"></i>
               </a>
             </div>
-          {% endif %}
+          {% endif %}          
         </ul>
       </div>
     </div>

@@ -1,0 +1,367 @@
+\documentclass[11pt, a4paper]{moderncv}
+
+% modern themes
+\definecolor{color1}{RGB}{52,73,94}
+\definecolor{green-sea}{RGB}{22,160,133}
+\moderncvstyle{banking}
+\moderncvhead{1}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% adjust the page margins
+\usepackage[margin=0.8in]{geometry}
+\recomputelengths
+
+% itemize
+\usepackage{enumitem}
+
+\usepackage{import}
+
+% font weight
+% http://www.tug.dk/FontCatalogue/lato/
+\renewcommand*{\sectionfont}{%
+  \if@norules%
+    \Large\bfseries\scshape%
+  \else%
+    \Large\fontseries{ub}\selectfont\upshape\fi}
+\renewcommand*{\subsectionfont}{%
+  \if@norules%
+    \large\mdseries\itshape%
+  \else%
+    \large\upshape\bfseries\fi}
+
+
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+
+% for moderncvheadi.sty
+\renewcommand*{\namefont}{\fontsize{30}{36}\bfseries\upshape}
+\renewcommand*{\namestyle}[1]{{\namefont\textcolor{color1}{#1}}}
+\renewcommand*{\addressfont}{\normalsize\mdseries\upshape}
+
+% symbol alignment
+\renewcommand*{\addresssymbol}       {\makebox[12pt]{\faHome}~}
+\renewcommand*{\mobilephonesymbol}   {\makebox[12pt]{\Large\faMobile}~}
+\renewcommand*{\emailsymbol}         {\makebox[12pt]{\small\faEnvelopeO}~}
+\renewcommand*{\homepagesymbol}      {\makebox[12pt]{\small\faGlobe}~}
+\renewcommand*{\githubsocialsymbol}  {\makebox[12pt]{\small\faGithub}~}
+
+% multiple emails for moderncvheadiii.sty
+% http://tex.stackexchange.com/questions/162441/add-a-second-website-in-moderncv-banking
+
+%% for i in range(10)
+\newcommand*{\email\VAR{ascii_uppercase[i]}}[1]{\def\@email\VAR{ascii_uppercase[i]}{#1}}
+%% endfor
+
+% email
+\patchcmd{\makecvhead}% <cmd>
+  {\ifthenelse{\isundefined{\@email}}{}{\makenewline\emailsymbol\emaillink{\@email}}}% <search>
+  {%
+    %% for i in range(10)
+    \ifthenelse{\isundefined{\@email\VAR{ascii_uppercase[i]}}}{}{\makenewline{\emailsymbol\emaillink{\@email\VAR{ascii_uppercase[i]}}}}%
+    %% endfor
+  }% <replace>
+  {}{}% <success><failure>
+
+% address
+\patchcmd{\makecvhead}% <cmd>
+  {%
+    \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
+      \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
+      \ifthenelse{\equal{\@addresscountry}{}}{}{\makenewline\@addresscountry}}%
+  }% <search>
+  {%
+    \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
+      \ifthenelse{\equal{\@addresscity}{}}{}{, \@addresscity}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
+      \ifthenelse{\equal{\@addresscountry}{}}{}{, \@addresscountry}}%
+  }% <replace>
+  {}{}% <success><failure>
+
+% left-align
+\patchcmd{\makecvhead}% <cmd>
+  {\if@left\begin{tabular}[b]{@{}r@{}}\fi}% <search>
+  {\if@left\begin{tabular}[b]{@{}l@{}}\fi}% <replace>
+  {}{}% <success><failure>
+
+
+% for colored entry
+\newcommand*{\cvcolorentry}[6]{\cventry{#1}{#2}{\color{color1}#3}{#4}{#5}{#6}}
+
+% centerize page numbers
+\nopagenumbers
+\AtEndPreamble{%
+  \AtBeginDocument{%
+      \@ifundefined{r@lastpage}{}{%
+        \ifthenelse{\pageref{lastpage}>1}{%
+          \newlength{\pagenumberwidth}%
+          \settowidth{\pagenumberwidth}{\color{color2}\addressfont\strut\thepage}%
+          \fancypagestyle{plain}{%
+            \fancyfoot[c]{\parbox[b]{\pagenumberwidth}{\color{color2}\addressfont\strut\thepage}}}% the parbox is required to ensure alignment with a possible center footer (e.g., as in the casual style)
+          \pagestyle{plain}}{}}%
+      \AtEndDocument{\label{lastpage}}}}
+
+\makeatother
+
+
+%----------------------------------------------------------------------------------
+% bibliography
+%----------------------------------------------------------------------------------
+\usepackage[backend=biber, style=nature, maxnames=99999, block=space, isbn=false, defernumbers=true]{biblatex}
+
+% moderncv & biblatex
+% http://tex.stackexchange.com/questions/123805/creating-bibliographies-with-biblatex-and-moderncv
+% numeric.bbx
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{%
+    \printfield{prefixnumber}%
+    \printfield{labelnumber}}}
+     {\setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endlist}
+  {\item}
+
+% highlight my name
+% http://tex.stackexchange.com/questions/73136/make-specific-author-bold-using-biblatex
+% internal macros were renamed from biblatex 3.3
+% http://tex.stackexchange.com/questions/315787/sorting-authorname-and-highlight-it-in-bold
+\usepackage{xpatch}% or use http://tex.stackexchange.com/a/40705
+\usepackage{xstring}
+\newbibmacro*{name:bold}[2]{%
+  \def\do##1{\IfStrEq{#1, #2}{##1}{\fontseries{ub}\selectfont\listbreak}{}}% not sure why ifstrequal does not work.
+  \dolistloop{\boldnames}}
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+
+\forcsvlist{\listadd\boldnames}
+  {{Kanai, Masahiro.}, {Kanai, M.}, {Kanai, M\bibinitperiod}, {*Kanai, M.}, {*Kanai, M\bibinitperiod}}
+
+% highlight journal title
+\xpretobibmacro{journal}{\begingroup\color{color1}\fontseries{eb}}{}{}
+\xapptobibmacro{journal}{\endgroup}{}{}
+
+% url/doi in sf format
+% c.f. https://tex.stackexchange.com/questions/253636/bibtex-doi-url-in-helvetica-font
+\urlstyle{sf}
+
+% misc driver
+\DeclareBibliographyDriver{misc}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/translator+others}%
+  \setunit{\labelnamepunct}\newblock
+  \iftoggle{bbx:articletitle}
+    {%
+      \usebibmacro{title}%
+      \newblock
+    }
+    {}%
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{bytranslator+others}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit\newblock
+  \usebibmacro{journal+issuetitle}%
+  \newunit
+  \usebibmacro{note+pages}%
+  \newunit
+  \iffieldundef{pages}
+    {\usebibmacro{doi+eprint+url}}
+    {}%
+  \setunit{\addspace}\newblock
+  \usebibmacro{issue+date}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \usebibmacro{related}%
+  \usebibmacro{finentry}%
+}
+
+% supress month&url
+% http://tex.stackexchange.com/questions/12806/guidelines-for-customizing-biblatex-styles
+\AtEveryBibitem{%
+  \clearfield{day}%
+  \clearfield{month}%
+  \clearfield{endday}%
+  \clearfield{endmonth}%
+  \clearfield{url}%
+}
+
+% upshape misc title
+\DeclareFieldFormat[misc]{title}{#1}
+
+\addbibresource{publications.bib}
+\addbibresource{review.en.bib}
+\addbibresource{international.bib}
+\addbibresource{domestic.en.bib}
+
+% co-first
+\defbibnote{cofirst}{(* = co-first)}
+
+
+%----------------------------------------------------------------------------------
+% data
+%----------------------------------------------------------------------------------
+
+% personal data
+\name{Masahiro}{Kanai}
+\title{Curriculum Vitae}
+
+%% if private['address']
+\address{\VAR{private['address']['street']}}{\VAR{private['address']['city']}}{\VAR{private['address']['country']}}
+%% endif
+
+%% if private['mobile']
+\phone[mobile]{\VAR{private['mobile']}}
+%% endif
+
+\emailA{mkanai@broadinstitute.org}
+\emailB{mkanai@g.harvard.edu}
+
+\homepage{mkanai.github.io}
+\social[github]{mkanai}
+% \photo[56pt][0.2pt]{picture}
+
+\lhead{\textit{Curriculum Vitae}}
+\rhead{Masahiro Kanai}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+
+%----------------------------------------------------------------------------------
+% CV title
+%----------------------------------------------------------------------------------
+\makecvtitle\thispagestyle{empty}
+\vspace{-42pt}
+
+%----------------------------------------------------------------------------------
+% Education
+%----------------------------------------------------------------------------------
+\section{Education}
+\cvcolorentry{Aug. 2017--present}{\upshape Bioinformatics and Integrative Genomics PhD Program, Harvard Medical School}{Harvard University}{Boston, USA}{}{}
+
+\vspace{6pt}
+\cvcolorentry{Apr. 2013--Mar. 2017}{B.S. in Bioinformatics}{Keio University}{Yokohama, Japan}{\upshape Department of Biosciences and Informatics}{}
+%% if private['gpa']
+\cvline{GPA}{\VAR{private['gpa']['overall']} (major: \VAR{private['gpa']['major']})}
+%% endif
+
+% \vspace{6pt}
+% \cvcolorentry{Apr. 2010--Mar. 2013}{High School}{Senior High School at Komaba, University of Tsukuba}{Tokyo, Japan}{}{}
+
+
+%----------------------------------------------------------------------------------
+% Research Experience
+%----------------------------------------------------------------------------------
+\section{Research Experience}
+\cvcolorentry{Jan. 2018--present}{Graduate Student}{Massachusetts General Hospital \& Broad Institute of MIT and Harvard}{Boston, USA}{\upshape Analytic and Translational Genetics Unit}{}
+\cvline{Advisors}{Drs. Mark Daly \& Hilary Finucane}
+\cvline{Research theme}{Cross-population analysis of complex human diseases and traits.}
+
+\vspace{8pt}
+\cvcolorentry{Apr. 2017--present}{Research Student}{Osaka University Graduate School of Medicine}{Osaka, Japan}{\upshape Department of Statistical Genetics}{}
+\cvline{Advisor}{Dr. Yukinori Okada}
+\cvline{Research themes}{}
+\begin{itemize}[leftmargin=.25in, nolistsep]
+  \item Genetic analysis of complex human diseases and traits in the Japanese population.
+  \item Efficient visualization of high-dimentional multi-omics data.
+\end{itemize}
+
+\vspace{8pt}
+\cvcolorentry{May 2015--Jul. 2019}{Research Assistant}{RIKEN Center for Integrative Medical Sciences}{Yokohama, Japan}{\upshape Laboratory for Statistical Analysis}{}
+\cvline{Advisors}{Drs. Yoichiro Kamatani \& Yukinori Okada}
+\cvline{Research themes}{}
+\begin{itemize}[leftmargin=.25in, nolistsep]
+  \item Genome-wide association study (GWAS) of \textasciitilde 200,000 individuals in the BioBank Japan Project.
+  \item Interpretation of GWAS polygenic signals using epigenomic data.
+  \item Population genetics analysis of 1,037 Japanese whole-genome sequences.
+\end{itemize}
+
+\vspace{8pt}
+\cvcolorentry{Apr. 2016--Mar. 2017}{Undergraduate Researcher}{Keio University}{Yokohama, Japan}{\upshape Laboratory for Bioinformatics}{}
+\cvline{Advisor}{Dr. Yasubumi Sakakibara}
+\cvline{Bachelor thesis}{Integrative multi-omics analysis of renal cell carcinoma.}
+
+\vspace{8pt}
+\cvcolorentry{Apr. 2014--Mar. 2016}{Technical Assistant}{Tokyo Medical and Dental University}{Tokyo, Japan}{\upshape Department of Human Genetics and Disease Diversity}{}
+\cvline{Advisors}{Drs. Yukinori Okada \& Toshihiro Tanaka}
+\cvline{Research themes}{}
+\begin{itemize}[leftmargin=.25in, nolistsep]
+  \item Empirical estimation of genome-wide significance thresholds based on GWAS simulations.
+  \item HLA imputation analysis using the Japanese-specific reference panel.
+\end{itemize}
+
+%----------------------------------------------------------------------------------
+% Certification
+%----------------------------------------------------------------------------------
+\section{Certification}
+\cvcolorentry{2015}{\textup{certificated by} the Japanese Society of Bioinformatics}{The Certification for Bioinformatics Engineers}{}{}{}
+
+
+%----------------------------------------------------------------------------------
+% Awards and Fellowships
+%----------------------------------------------------------------------------------
+\section{Awards and Fellowships}
+\cvcolorentry{2020}{\textup{Finalist (Predoctoral)}, The American Society of Human Genetics 2020 Virtual Meeting}{Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research}{USA}{}{}
+\cvcolorentry{2019}{The American Society of Human Genetics 2019 Annual Meeting}{Reviewers’ Choice Abstract Award}{Houston, USA}{}{}
+\cvcolorentry{2018--2022+}{\textup{Research grant for cross-population analysis of complex human diseases and traits.}}{Masason Foundation Fellowship}{Tokyo, Japan}{}{}
+\cvcolorentry{2017--2021}{\textup{Predoctoral fellowship which covers up to \textasciitilde\$50,000/year for tuition and stipend.}}{Nakajima Foundation Fellowship}{Tokyo, Japan}{}{}
+\cvcolorentry{2011}{Microsoft Imagine Cup 2011 Windows 7 Touch Challenge}{The 3rd place, Worldwide Finals}{New York, USA}{}{}
+\cvcolorentry{2010}{Microsoft Imagine Cup 2010 Software Design Competition}{The 1st place, National Finals \& Worldwide Finalist}{Japan \& Poland}{}{}
+
+%----------------------------------------------------------------------------------
+% Skills
+%----------------------------------------------------------------------------------
+% \section{Technical Skills}
+% \cvline{Programming Language}{C/C++, C\#, Python, R, Java, Matlab, Unix shell, sed/awk}
+% \cvline{Analysis}{GWAS, Genotype Imputation, HLA Imputation, Polygenic analysis using GCTA and LDSC}
+
+%----------------------------------------------------------------------------------
+% Publications
+%----------------------------------------------------------------------------------
+\section{Publications}
+\nocite{*}
+\printbibliography[title={Selected Publications and Preprints}, heading=subbibliography, type=article, keyword={selected}, prenote=cofirst]
+\printbibliography[title={Other Publications and Preprints}, heading=subbibliography, type=article, notkeyword={selected}, notkeyword={review}]
+\printbibliography[title={Reviews (in Japanese)}, heading=subbibliography, type=article, keyword={review}, resetnumbers=true]
+
+%----------------------------------------------------------------------------------
+% Presentations
+%----------------------------------------------------------------------------------
+\section{Presentations}
+\printbibliography[title={International Conference}, heading=subbibliography, keyword={international conference}, resetnumbers=true]
+\printbibliography[title={Domestic Conference (in Japan)}, heading=subbibliography, keyword={domestic conference}, resetnumbers=true]
+
+\begin{flushright}
+  \footnotesize
+  Last updated: \today.
+\end{flushright}
+
+\end{document}
+

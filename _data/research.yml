@@ -1,0 +1,43 @@
+en:
+  - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
+    position: Graduate Student, Analytic and Translational Genetics Unit 
+    duration: Jan. 2018 - present
+    advisor: Drs. Mark Daly & Hilary Finucane
+  - name: Osaka University Graduate School of Medicine
+    position: Research Student, Department of Statistical Genetics
+    duration: Apr. 2017 - present
+    advisor: Dr. Yukinori Okada
+  - name: RIKEN Center for Integrative Medical Sciences
+    position: Research Assistant, Laboratory for Statistical Analysis
+    duration: May. 2015 - Jul. 2019
+    advisor: Drs. Yoichiro Kamatani & Yukinori Okada
+  - name: Keio University
+    position: Undergraduate Researcher, Department of Biosciences and Informatics
+    duration: Apr. 2016 - Mar. 2017
+    advisor: Dr. Yasubumi Sakakibara
+  - name: Tokyo Medical and Dental University
+    position: Technical Assistant, Department of Human Genetics and Disease Diversity
+    duration: Apr. 2014 - Mar. 2016
+    advisor: Drs. Yukinori Okada & Toshihiro Tanaka
+ja:
+  - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
+    position: 大学院生 (PhD), Analytic and Translational Genetics Unit
+    duration: 2018/01 - 現在
+    advisor: Drs. Mark Daly & Hilary Finucane
+  - name: 大阪大学大学院 医学系研究科 遺伝統計学
+    position: 特別研究生
+    duration: 2017/04 - 現在
+    advisor: 岡田 随象 先生
+  - name: 理化学研究所 統合生命医科学研究センター 統計解析研究チーム
+    position: 研修生
+    duration: 2015/05 - 2019/07
+    advisor: 鎌谷 洋一郎 先生 & 岡田 随象 先生
+  - name: 慶應義塾大学 理工学部 生命情報学科 バイオインフォマティクス研究室 (榊原研究室)
+    position: 学部生
+    duration: 2016/04 - 2017/03
+    advisor: 榊原 康文 先生
+  - name: 東京医科歯科大学 大学院医歯学総合研究科 疾患多様性遺伝学分野
+    position: 技術補佐員
+    duration: 2014/04 - 2016/03
+    advisor: 岡田 随象 先生 & 田中 敏博 先生
+
