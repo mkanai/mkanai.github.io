@@ -260,6 +260,14 @@ progress::-moz-progress-bar {
   }
 }
 
+@media (max-width: 575.98px) {
+  .social{
+    .contact-icons {
+      font-size: 2.8rem;
+    }
+  }
+}
+
 
 // Footer
 footer.fixed-bottom {
@@ -277,6 +285,12 @@ footer.fixed-bottom {
       color: var(--global-theme-color);
       text-decoration: none;
     }
+  }
+}
+@media (max-width: 575.98px) {
+  footer.fixed-bottom {
+    display: none;
+    visibility: none;
   }
 }
 

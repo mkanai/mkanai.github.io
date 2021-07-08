@@ -9,7 +9,7 @@ redirect_from:
   - /ja/publications/
 ---
 
-<p>Selected publications are summarized <a href="/">here</a>.</p>
+<p>Selected publications are listed <a href="/">here</a>.</p>
 <p>Link to 
     <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a> | 
     <a href="https://orcid.org/{{site.orcid_id}}" target="_blank" rel="noopener"><i class="ai ai-orcid"></i> ORCID</a> | 
