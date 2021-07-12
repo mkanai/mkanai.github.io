@@ -123,6 +123,7 @@ exclude:
   - scripts
   - .DS_Store
   - .jekyll-cache
+  - .tweet-cache
   - blog
   - _posts
   - _projects
