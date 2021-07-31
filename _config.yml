@@ -120,6 +120,7 @@ exclude:
   - vendor
   - Rakefile
   - README.md
+  - CONTRIBUTING.md
   - scripts
   - .DS_Store
   - .jekyll-cache
