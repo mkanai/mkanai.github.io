@@ -215,7 +215,7 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 
 .publications h1 { color: var(--global-theme-color); font-size: 2rem; text-align: center; margin-top: 1em; margin-bottom: 1em; }
 
-.publications h2 { margin-bottom: 1rem; }
+.publications h2 { margin-bottom: 1rem; scroll-margin-top: 2.5rem; }
 
 .publications h2 span { font-size: 1.5rem; }
 
@@ -312,6 +312,8 @@ pre pre, pre code { background-color: transparent; border-radius: 0; padding: 0;
 code { color: var(--global-theme-color); background-color: var(--global-code-bg-color); border-radius: 3px; padding: 3px 3px; }
 
 html.transition, html.transition *, html.transition *:before, html.transition *:after { transition: all 750ms !important; transition-delay: 0 !important; }
+
+html { scroll-behavior: smooth; }
 
 /******************************************************************************* Style overrides for distill blog posts. */
 d-byline { border-top-color: #e8e8e8 !important; }
