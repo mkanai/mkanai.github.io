@@ -438,6 +438,7 @@ footer.sticky-bottom {
   }
   h2 {
     margin-bottom: 1rem;
+    scroll-margin-top: 2.5rem;
     span {
       font-size: 1.5rem;
     }
@@ -728,4 +729,9 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
 }

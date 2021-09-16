@@ -18,6 +18,11 @@ redirect_from:
 <p>* denotes equal contribution</p>
 
 <div class="publications">
+<p>
+    Jump to {% for y in page.years %}
+    <a href="#{{y}}">{{y}}</a> |
+    {% endfor %}
+</p>
 
 {% for y in page.years %}
   <h2 class="year" id="{{y}}">{{y}}</h2>
