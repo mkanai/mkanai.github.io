@@ -140,11 +140,15 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-redirect-from
   - jekyll/scholar
+  - jekyll-tidy
   - jekyll-twitter-plugin
   - jemoji
 
 # Extras
 github: [metadata]
+
+jekyll_tidy:
+  compress_html: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
