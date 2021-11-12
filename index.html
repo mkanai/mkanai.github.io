@@ -1,3212 +1,856 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<title>Masahiro  Kanai</title>
-<meta name="description" content="PhD candidate in the Bioinformatics and Integrative Genomics Program, Harvard Medical School.
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Masahiro  Kanai</title>
+    <meta name="description" content="PhD candidate in the Bioinformatics and Integrative Genomics Program, Harvard Medical School.
 ">
-
-<!-- Open Graph -->
-
-
-<!-- Bootstrap & MDB -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
-
-<!-- Fonts & Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap">
-
-<!-- Code Syntax Highlighting -->
-<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
-
-<!-- Styles -->
-
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
-
-<link rel="stylesheet" href="/assets/css/main.css">
-
-<link rel="canonical" href="/">
-
-<!-- Webp polyfill -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement" crossorigin="anonymous"></script>
-
-<!-- JQuery -->
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-
-
-<!-- Theming-->
-
+    <!-- Open Graph -->
+    <!-- Bootstrap & MDB -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap">
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+    <!-- Styles -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/">
+  <!-- Webp polyfill -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement" crossorigin="anonymous"></script>
+  <!-- JQuery -->
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <!-- Theming-->
   <script src="/assets/js/theme.js"></script>
   <!-- Load DarkMode JS -->
-<script src="/assets/js/dark_mode.js"></script>
-
-
-
+  <script src="/assets/js/dark_mode.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFKLBV2ZNN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
+    
     gtag('config', 'G-BFKLBV2ZNN');
   </script>
-
-
-
-
-    
-
-  </head>
-
-  <body class="fixed-top-nav ">
-
-    <!-- Header -->
-
-    <header>
-
+</head>
+<body class="fixed-top-nav ">
+  <!-- Header -->
+  <header>
     <!-- Nav Bar -->
     <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
-    <div class="container">
-      
+      <div class="container">
         <!-- Social Icons -->
         <div class="navbar-brand social">
           <a href="mailto:%6D%6B%61%6E%61%69@%62%72%6F%61%64%69%6E%73%74%69%74%75%74%65.%6F%72%67"><i class="fas fa-envelope"></i></a>
-<a href="https://orcid.org/0000-0001-5165-4408" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
-<a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-
-
-<a href="https://github.com/mkanai" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-<a href="https://www.linkedin.com/in/masahiro-kanai-189492119" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-<a href="https://twitter.com/masakanai" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-
-
-
-
-
-
-
-
-
-<a href="/assets/pdf/CV.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
-
+          <a href="https://orcid.org/0000-0001-5165-4408" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+          <a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://github.com/mkanai" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/masahiro-kanai-189492119" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/masakanai" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="/assets/pdf/CV.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
         </div>
-      
-      <!-- Navbar Toggle -->
-      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
-          
-          <!-- About -->
-          <li class="nav-item active">
-            <a class="nav-link" href="/">
-              About
-              
-            </a>
-          </li>
-          <!-- CV -->
-          <li class="nav-item ">
-            <a class="nav-link" href="/cv/">
-              CV
-              
-            </a>
-          </li>
-          
-          <!-- Other pages -->
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="nav-item ">
+        <!-- Navbar Toggle -->
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <!-- About -->
+            <li class="nav-item active">
+              <a class="nav-link" href="/">
+                About
+              </a>
+            </li>
+            <!-- CV -->
+            <li class="nav-item ">
+              <a class="nav-link" href="/cv/">
+                CV
+              </a>
+            </li>
+            <!-- Other pages -->
+            <li class="nav-item ">
               <a class="nav-link" href="/publications/">
                 Publications
-                
               </a>
-          </li>
-          
-          
-          
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-globe"></i> 
-              
-              English
-              
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="nav-link dropdown-item" href="/ja/">日本語</a>
-            </div>
-          </li>
-          
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-globe"></i>
+                English
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="nav-link dropdown-item" href="/ja/">日本語</a>
+              </div>
+            </li>
             <div class="toggle-container">
               <a id="light-toggle">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
               </a>
             </div>
-                    
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-
-</header>
-
-
-
+    </nav>
+  </header>
   <!-- Scrolling Progress Bar -->
   <progress id="progress" value="0">
     <div class="progress-container">
       <span class="progress-bar"></span>
     </div>
   </progress>
-
-    <!-- Content -->
-
-    <div class="container mt-5">
-      <div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">
-     <span class="font-weight-bold">Masahiro</span> Kanai <nobr><small>(金井 仁弘)</small></nobr>
-    </h1>
-     <p class="desc"></p>
-  </header>
-
-  <article>
-    
-    <div class="profile float-right">
-      
-        <picture>
-          <source srcset="/assets/img/prof_pic.webp" type="image/webp">
-          <img class="img-fluid z-depth-1 rounded" src="/assets/img/prof_pic.jpg">
-        </source></picture>
-      
-      
-      <div class="social">
-        <div class="contact-icons" style="font-size: 1.7rem;">
-          <a href="mailto:%6D%6B%61%6E%61%69@%62%72%6F%61%64%69%6E%73%74%69%74%75%74%65.%6F%72%67"><i class="fas fa-envelope"></i></a>
-<a href="https://orcid.org/0000-0001-5165-4408" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
-<a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-
-
-<a href="https://github.com/mkanai" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-<a href="https://www.linkedin.com/in/masahiro-kanai-189492119" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-<a href="https://twitter.com/masakanai" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-
-
-
-
-
-
-
-
-
-<a href="/assets/pdf/CV.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
-
+  <!-- Content -->
+  <div class="container mt-5">
+    <div class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <span class="font-weight-bold">Masahiro</span> Kanai <nobr><small>(金井 仁弘)</small></nobr>
+        </h1>
+        <p class="desc"></p>
+      </header>
+      <article>
+        <div class="profile float-right">
+          <picture>
+            <source srcset="/assets/img/prof_pic.webp" type="image/webp">
+            <img class="img-fluid z-depth-1 rounded" src="/assets/img/prof_pic.jpg">
+          </source></picture>
+          <div class="social">
+            <div class="contact-icons" style="font-size: 1.7rem;">
+              <a href="mailto:%6D%6B%61%6E%61%69@%62%72%6F%61%64%69%6E%73%74%69%74%75%74%65.%6F%72%67"><i class="fas fa-envelope"></i></a>
+              <a href="https://orcid.org/0000-0001-5165-4408" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+              <a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://github.com/mkanai" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/masahiro-kanai-189492119" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/masakanai" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="/assets/pdf/CV.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <p>I am a Ph.D. candidate in <a href="http://www.hms.harvard.edu/dms/big/" target="\_blank">the Bioinformatics and Integrative Genomics PhD Program</a>, Harvard Medical School. Co-advised by Drs. <a href="https://www.broadinstitute.org/bios/mark-daly" target="\_blank">Mark Daly</a> and <a href="https://www.broadinstitute.org/bios/hilary-finucane" target="\_blank">Hilary Finucane</a>, I am working at <a href="https://www.atgu.mgh.harvard.edu/" target="\_blank">the Analytic and Translational Genetics Unit</a>, Massachusetts General Hospital and affiliated with <a href="https://www.broadinstitute.org/medical-population-genetics" target="\_blank">the Medical and Population Genetics Program</a>, Broad Institute of MIT and Harvard. I received fellowships from <a href="http://www.nakajimafound.or.jp/" target="\_blank">the Nakajima Foundation</a> and <a href="https://masason-foundation.org/en/" target="\_blank">the Masason Foundation</a>.</p>
+          <p>As a statistical geneticist, my research focuses on cross-population analysis of complex diseases and traits to better understand their genetic architecture and diversity across multiple populations. In my thesis project, I create a comprehensive atlas of putative causal variants from multiple large-scale biobanks to gain insights from complex trait fine-mapping across diverse populations. Prior to joining ATGU, I completed B.S. degree in Japan, where I worked closely with Dr. <a href="http://www.sg.med.osaka-u.ac.jp/" target="\_blank">Yukinori Okada</a> to study genetics of complex traits in the Japanese population using <a href="https://biobankjp.org/en/" target="\_blank">the BioBank Japan</a> data.</p>
+          <p>My curriculum vitae can be found <span><nobr><a href="/assets/pdf/CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> here</a></nobr></span>.</p>
+        </div>
+        <div class="news">
+          <h2>News</h2>
+          <div class="table-responsive">
+            <table class="table table-sm table-borderless">
+              <tr>
+                <th scope="row">Sep 30, 2021</th>
+                <td>
+                  Added <a href="http://dx.doi.org/10.1038/s41588-021-00931-x" target="\_blank">*Sakaue, S &amp; *Kanai, M. et al. (2021)</a>.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Sep 6, 2021</th>
+                <td>
+                  Added <a href="http://dx.doi.org/10.1101/2021.09.03.21262975" target="\_blank">Kanai, M. et al. (2021)</a>.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Jul 8, 2021</th>
+                <td>
+                  Added <a href="https://dx.doi.org/10.1038/s41586-021-03767-x" target="\_blank">The COVID-19 Host Genetics Initiative (2021)</a>.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Jul 1, 2021</th>
+                <td>
+                  New website <img class="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20">
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="publications">
+          <h2>Selected Publications and Preprints <small><a href="/publications">[full list]</a></small>
+</h2>
+          <p>Link to 
+            <a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a> | 
+            <a href="https://orcid.org/0000-0001-5165-4408" target="_blank" rel="noopener"><i class="ai ai-orcid"></i> ORCID</a> | 
+            <a href="https://www.ncbi.nlm.nih.gov/myncbi/masahiro.kanai.1/bibliography/public/" target="_blank" rel="noopener"><i class="ai ai-pubmed"></i> PubMed</a>
+          </p>
+          <p>* denotes equal contribution</p>
+          <ol class="bibliography">
+            <li>
+              <div class="row">
+                <div class="col-sm-1 abbr">
+                </div>
+                <div id="Kanai2021" class="col-sm-8">
+                  <div class="title"><a href="https://dx.doi.org/10.1101/2021.09.03.21262975" target="_blank" rel="noopener">Insights from complex trait fine-mapping across diverse populations</a></div>
+                  <div class="author">
+                    <em>Kanai, M.</em>,
+                    <span class="coauthor">
+                      Ulirsch, J. C.,
+                    </span>
+                    <span class="coauthor">
+                      Karjalainen, J.,
+                    </span>
+                    <a class="coauthor etal visible" role="button">...,</a>
+                    <span class="coauthor etal">
+                      Kurki, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Karczewski, K. J.,
+                    </span>
+                    <span class="coauthor etal">
+                      Fauman, E. B.,
+                    </span>
+                    <span class="coauthor etal">
+                      Wang, Q. S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Jacobs, H.,
+                    </span>
+                    <span class="coauthor etal">
+                      Aguet, F.,
+                    </span>
+                    <span class="coauthor etal">
+                      Ardlie, K. G.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kerimov, N.,
+                    </span>
+                    <span class="coauthor etal">
+                      Alasoo, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Benner, C.,
+                    </span>
+                    <span class="coauthor etal">
+                      Ishigaki, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Sakaue, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Reilly, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      The BioBank Japan Project.,
+                    </span>
+                    <span class="coauthor etal">
+                      FinnGen.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kamatani, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Matsuda, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Palotie, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Neale, B. M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Tewhey, R.,
+                    </span>
+                    <span class="coauthor etal">
+                      Sabeti, P. C.,
+                    </span>
+                    <span class="coauthor etal">
+                      Okada, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Daly, M. J.,
+                    </span>
+                    and Finucane, H. K.
+                    <a class="coauthor etal" role="button">[Show fewer authors]</a>
+                  </div>
+                  <div class="periodical">
+                    <em>medRxiv</em>
+                    (2021)
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                    <a href="https://dx.doi.org/10.1101/2021.09.03.21262975" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
+                    <a href="https://github.com/mkanai/finemapping-insights" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
+                    <a href="https://www.finucanelab.org/data" class="btn btn-sm z-depth-0" role="button" target="_blank">Data</a>
+                    <div class="altmetric-badge">
+                      <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1101/2021.09.03.21262975" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                    </div>
+                  </div>
+                  <!-- Hidden abstract block -->
+                  <div class="abstract hidden">
+                    <p>Despite the great success of genome-wide association studies (GWAS) in identifying genetic loci significantly associated with diseases, the vast majority of causal variants underlying disease-associated loci have not been identified. To create an atlas of causal variants, we performed and integrated fine-mapping across 148 complex traits in three large-scale biobanks (BioBank Japan, FinnGen, and UK Biobank; total n = 811,261), resulting in 4,518 variant-trait pairs with high posterior probability (&gt; 0.9) of causality. Of these, we found 285 high-confidence variant-trait pairs replicated across multiple populations, and we characterized multiple contributors to the surprising lack of overlap among fine-mapping results from different biobanks. By studying the bottlenecked Finnish and Japanese populations, we identified 21 and 26 putative causal coding variants with extreme allele frequency enrichment (&gt; 10-fold) in these two populations, respectively. Aggregating data across populations enabled identification of 1,492 unique fine-mapped coding variants and 176 genes in which multiple independent coding variants influence the same trait (i.e., with an allelic series of coding variants). Our results demonstrate that fine-mapping in diverse populations enables novel insights into the biology of complex traits by pinpointing high-confidence causal variants for further characterization.</p>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="altmetric-donut">
+                    <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/2021.09.03.21262975" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1 abbr">
+                </div>
+                <div id="Sakaue2021" class="col-sm-8">
+                  <div class="title"><a href="https://dx.doi.org/10.1038/s41588-021-00931-x" target="_blank" rel="noopener">A cross-population atlas of genetic associations for 220 human phenotypes</a></div>
+                  <div class="author">
+                    <span class="coauthor">
+                      *Sakaue, S.,
+                    </span>
+                    <em>*Kanai, M.</em>,
+                    <span class="coauthor">
+                      Tanigawa, Y.,
+                    </span>
+                    <a class="coauthor etal visible" role="button">...,</a>
+                    <span class="coauthor etal">
+                      Karjalainen, J.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kurki, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Koshiba, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Narita, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Konuma, T.,
+                    </span>
+                    <span class="coauthor etal">
+                      Yamamoto, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Akiyama, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Ishigaki, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Suzuki, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Suzuki, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Obara, W.,
+                    </span>
+                    <span class="coauthor etal">
+                      Yamaji, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Takahashi, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Asai, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Takahashi, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Suzuki, T.,
+                    </span>
+                    <span class="coauthor etal">
+                      Shinozaki, N.,
+                    </span>
+                    <span class="coauthor etal">
+                      Yamaguchi, H.,
+                    </span>
+                    <span class="coauthor etal">
+                      Minami, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Murayama, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Yoshimori, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Nagayama, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Obata, D.,
+                    </span>
+                    <span class="coauthor etal">
+                      Higashiyama, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Masumoto, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Koretsune, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Ito, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Terao, C.,
+                    </span>
+                    <span class="coauthor etal">
+                      Yamauchi, T.,
+                    </span>
+                    <span class="coauthor etal">
+                      Komuro, I.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kadowaki, T.,
+                    </span>
+                    <span class="coauthor etal">
+                      Tamiya, G.,
+                    </span>
+                    <span class="coauthor etal">
+                      Yamamoto, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Nakamura, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kubo, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Murakami, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Yamamoto, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kamatani, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Palotie, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Rivas, M. A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Daly, M. J.,
+                    </span>
+                    <span class="coauthor etal">
+                      Matsuda, K.,
+                    </span>
+                    and Okada, Y.
+                    <a class="coauthor etal" role="button">[Show fewer authors]</a>
+                  </div>
+                  <div class="periodical">
+                    <em>Nature Genetics</em>
+                    <b>53</b>,
+                    1415–1424
+                    (2021)
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                    <a href="https://rdcu.be/cyG6p" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+                    <a href="https://www.ncbi.nlm.nih.gov/pubmed/34594039" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
+                    <a href="https://dx.doi.org/10.1101/2020.10.23.20213652" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">medRxiv</a>
+                    <a href="https://pheweb.jp/" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
+                    <a href="https://www.med.osaka-u.ac.jp/eng/activities/results/2021year/okada2021-10-01" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
+                    <div class="altmetric-badge">
+                      <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41588-021-00931-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                    </div>
+                  </div>
+                  <!-- Hidden abstract block -->
+                  <div class="abstract hidden">
+                    <p>Current genome-wide association studies do not yet capture sufficient diversity in populations and scope of phenotypes. To expand an atlas of genetic associations in non-European populations, we conducted 220 deep-phenotype genome-wide association studies (diseases, biomarkers and medication usage) in BioBank Japan (n = 179,000), by incorporating past medical history and text-mining of electronic medical records. Meta-analyses with the UK Biobank and FinnGen (ntotal = 628,000) identified  5,000 new loci, which improved the resolution of the genomic map of human traits. This atlas elucidated the landscape of pleiotropy as represented by the major histocompatibility complex locus, where we conducted HLA fine-mapping. Finally, we performed statistical decomposition of matrices of phenome-wide summary statistics, and identified latent genetic components, which pinpointed responsible variants and biological mechanisms underlying current disease classifications across populations. The decomposed components enabled genetically informed subtyping of similar diseases (for example, allergic diseases). Our study suggests a potential avenue for hypothesis-free re-investigation of human diseases through genetics. Genome-wide analyses in BioBank Japan, UK Biobank and FinnGen identify  5,000 new loci associated with 220 human traits. Statistical decomposition of matrices of phenome-wide summary statistics further highlights variants underpinning diseases across populations.</p>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="altmetric-donut">
+                    <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41588-021-00931-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1 abbr">
+                </div>
+                <div id="The_COVID-19_Host_Genetics_Initiative2021a" class="col-sm-8">
+                  <div class="title"><a href="https://dx.doi.org/10.1038/s41586-021-03767-x" target="_blank" rel="noopener">Mapping the human genetic architecture of COVID-19</a></div>
+                  <div class="author">
+                    The COVID-19 Host Genetics Initiative.
+                  </div>
+                  <div class="periodical">
+                    <em>Nature</em>
+                    (2021)
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                    <a href="https://rdcu.be/cnZTx" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+                    <a href="https://www.ncbi.nlm.nih.gov/pubmed/34237774" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
+                    <a href="https://dx.doi.org/10.1101/2021.03.10.21252820" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">medRxiv</a>
+                    <a href="https://www.covid19hg.org/" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
+                    <a href="https://www.broadinstitute.org/news/large-genomic-analysis-highlights-covid-19-risk-factors" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
+                    <div class="altmetric-badge">
+                      <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41586-021-03767-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                    </div>
+                  </div>
+                  <!-- Hidden abstract block -->
+                  <div class="abstract hidden">
+                    <p>The genetic makeup of an individual contributes to susceptibility and response to viral infection. While environmental, clinical and social factors play a role in exposure to SARS-CoV-2 and COVID-19 disease severity1,2, host genetics may also be important. Identifying host-specific genetic factors may reveal biological mechanisms of therapeutic relevance and clarify causal relationships of modifiable environmental risk factors for SARS-CoV-2 infection and outcomes. We formed a global network of researchers to investigate the role of human genetics in SARS-CoV-2 infection and COVID-19 severity. We describe the results of three genome-wide association meta-analyses comprised of up to 49,562 COVID-19 patients from 46 studies across 19 countries. We reported 13 genome-wide significant loci that are associated with SARS-CoV-2 infection or severe manifestations of COVID-19. Several of these loci correspond to previously documented associations to lung or autoimmune and inflammatory diseases3–7. They also represent potentially actionable mechanisms in response to infection. Mendelian Randomization analyses support a causal role for smoking and body mass index for severe COVID-19 although not for type II diabetes. The identification of novel host genetic factors associated with COVID-19, with unprecedented speed, was made possible by the community of human genetic researchers coming together to prioritize sharing of data, results, resources and analytical frameworks. This working model of international collaboration underscores what is possible for future genetic discoveries in emerging pandemics, or indeed for any complex human disease.</p>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="altmetric-donut">
+                    <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41586-021-03767-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1 abbr">
+                </div>
+                <div id="Weissbrod2021" class="col-sm-8">
+                  <div class="title"><a href="https://dx.doi.org/10.1101/2021.01.19.21249483" target="_blank" rel="noopener">Leveraging fine-mapping and non-European training data to improve trans-ethnic polygenic risk scores</a></div>
+                  <div class="author">
+                    <span class="coauthor">
+                      *Weissbrod, O.,
+                    </span>
+                    <em>*Kanai, M.</em>,
+                    <span class="coauthor">
+                      *Shi, H.,
+                    </span>
+                    <a class="coauthor etal visible" role="button">...,</a>
+                    <span class="coauthor etal">
+                      Gazal, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Peyrot, W.,
+                    </span>
+                    <span class="coauthor etal">
+                      Khera, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Okada, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      The Biobank Japan Project.,
+                    </span>
+                    <span class="coauthor etal">
+                      Martin, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Finucane, H.,
+                    </span>
+                    and Price, A. L.
+                    <a class="coauthor etal" role="button">[Show fewer authors]</a>
+                  </div>
+                  <div class="periodical">
+                    <em>medRxiv</em>
+                    (2021)
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                    <a href="https://dx.doi.org/10.1101/2021.01.19.21249483" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
+                    <a href="https://github.com/omerwe/polyfun" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
+                    <div class="altmetric-badge">
+                      <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1101/2021.01.19.21249483" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                    </div>
+                  </div>
+                  <!-- Hidden abstract block -->
+                  <div class="abstract hidden">
+                    <p>Polygenic risk scores (PRS) based on European training data suffer reduced accuracy in non-European target populations, exacerbating health disparities. This loss of accuracy predominantly stems from LD differences, MAF differences (including population-specific SNPs), and/or causal effect size differences. Here, we propose PolyPred, a method that improves trans-ethnic polygenic prediction by combining two complementary predictors: a new predictor that leverages functionally informed fine-mapping to estimate causal effects (instead of tagging effects), addressing LD differences; and BOLT-LMM, a published predictor. In the special case where a large training sample is available in the non-European target population (or a closely related population), we propose PolyPred+, which further incorporates the non-European training data, addressing MAF differences and causal effect size differences. We applied PolyPred to 49 diseases and complex traits in 4 UK Biobank populations using UK Biobank British training data (averageN=325K), and observed statistically significant average relative improvements in prediction accuracy vs. BOLT-LMM ranging from +7% in South Asians to +32% in Africans (and vs. LD-pruning + P-value thresholding (P+T) ranging from +77% to +164%), consistent with simulations. We applied PolyPred+ to 23 diseases and complex traits in UK Biobank East Asians using both UK Biobank British (averageN=325K) and Biobank Japan (averageN=124K) training data, and observed statistically significant average relative improvements in prediction accuracy of +24% vs. BOLT-LMM and +12% vs. PolyPred. In conclusion, PolyPred and PolyPred+ improve trans-ethnic polygenic prediction accuracy, ameliorating health disparities.</p>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="altmetric-donut">
+                    <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/2021.01.19.21249483" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1 abbr">
+                </div>
+                <div id="Sakaue2020a" class="col-sm-8">
+                  <div class="title"><a href="https://dx.doi.org/10.1038/s41591-020-0785-8" target="_blank" rel="noopener">Trans-biobank analysis with 676,000 individuals elucidates the association of polygenic risk scores of complex traits with human lifespan</a></div>
+                  <div class="author">
+                    <span class="coauthor">
+                      *Sakaue, S.,
+                    </span>
+                    <em>*Kanai, M.</em>,
+                    <span class="coauthor">
+                      Karjalainen, J.,
+                    </span>
+                    <a class="coauthor etal visible" role="button">...,</a>
+                    <span class="coauthor etal">
+                      Akiyama, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kurki, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Matoba, N.,
+                    </span>
+                    <span class="coauthor etal">
+                      Takahashi, A.,
+                    </span>
+                    <span class="coauthor etal">
+                      Hirata, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kubo, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Matsuda, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Murakami, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Daly, M. J.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kamatani, Y.,
+                    </span>
+                    and Okada, Y.
+                    <a class="coauthor etal" role="button">[Show fewer authors]</a>
+                  </div>
+                  <div class="periodical">
+                    <em>Nature Medicine</em>
+                    <b>26</b>,
+                    542–548
+                    (2020)
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                    <a href="https://rdcu.be/cmhcK" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+                    <a href="https://www.ncbi.nlm.nih.gov/pubmed/32251405" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
+                    <a href="https://dx.doi.org/10.1101/856351" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">bioRxiv</a>
+                    <a href="http://www.med.osaka-u.ac.jp/eng/activities/results/2020year/okada20200324" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
+                    <div class="altmetric-badge">
+                      <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41591-020-0785-8" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                    </div>
+                  </div>
+                  <!-- Hidden abstract block -->
+                  <div class="abstract hidden">
+                    <p>While polygenic risk scores (PRSs) are poised to be translated into clinical practice through prediction of inborn health risks1, a strategy to utilize genetics to prioritize modifiable risk factors driving heath outcome is warranted2. To this end, we investigated the association of the genetic susceptibility to complex traits with human lifespan in collaboration with three worldwide biobanks (ntotal = 675,898; BioBank Japan (n = 179,066), UK Biobank (n = 361,194) and FinnGen (n = 135,638)). In contrast to observational studies, in which discerning the cause-and-effect can be difficult, PRSs could help to identify the driver biomarkers affecting human lifespan. A high systolic blood pressure PRS was trans-ethnically associated with a shorter lifespan (hazard ratio = 1.03[1.02-1.04], Pmeta = 3.9 \times 10-13) and parental lifespan (hazard ratio = 1.06[1.06-1.07], P = 2.0 \times 10-86). The obesity PRS showed distinct effects on lifespan in Japanese and European individuals (Pheterogeneity = 9.5 \times 10-8 for BMI). The causal effect of blood pressure and obesity on lifespan was further supported by Mendelian randomization studies. Beyond genotype-phenotype associations, our trans-biobank study offers a new value of PRSs in prioritization of risk factors that could be potential targets of medical treatment to improve population health.</p>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="altmetric-donut">
+                    <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41591-020-0785-8" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1 abbr">
+                </div>
+                <div id="Martin2019" class="col-sm-8">
+                  <div class="title"><a href="https://dx.doi.org/10.1038/s41588-019-0379-x" target="_blank" rel="noopener">Clinical use of current polygenic risk scores may exacerbate health disparities</a></div>
+                  <div class="author">
+                    <span class="coauthor">
+                      Martin, A. R.,
+                    </span>
+                    <em>Kanai, M.</em>,
+                    <span class="coauthor">
+                      Kamatani, Y.,
+                    </span>
+                    <a class="coauthor etal visible" role="button">...,</a>
+                    <span class="coauthor etal">
+                      Okada, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Neale, B. M.,
+                    </span>
+                    and Daly, M. J.
+                    <a class="coauthor etal" role="button">[Show fewer authors]</a>
+                  </div>
+                  <div class="periodical">
+                    <em>Nature Genetics</em>
+                    <b>51</b>,
+                    584–591
+                    (2019)
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                    <a href="https://rdcu.be/cmqUB" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+                    <a href="https://www.ncbi.nlm.nih.gov/pubmed/30926966" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
+                    <a href="https://dx.doi.org/10.1101/441261" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">bioRxiv</a>
+                    <a href="https://github.com/armartin/prs_disparities" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
+                    <a href="https://www.broadinstitute.org/news/study-highlights-need-increase-diversity-within-genetic-data-sets" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
+                    <div class="altmetric-badge">
+                      <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41588-019-0379-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                    </div>
+                  </div>
+                  <!-- Hidden abstract block -->
+                  <div class="abstract hidden">
+                    <p>Polygenic risk scores (PRS) are poised to improve biomedical outcomes via precision medicine. However, the major ethical and scientific challenge surrounding clinical implementation of PRS is that those available today are several times more accurate in individuals of European ancestry than other ancestries. This disparity is an inescapable consequence of Eurocentric biases in genome-wide association studies, thus highlighting that-unlike clinical biomarkers and prescription drugs, which may individually work better in some populations but do not ubiquitously perform far better in European populations-clinical uses of PRS today would systematically afford greater improvement for European-descent populations. Early diversifying efforts show promise in leveling this vast imbalance, even when non-European sample sizes are considerably smaller than the largest studies to date. To realize the full and equitable potential of PRS, greater diversity must be prioritized in genetic studies, and summary statistics must be publically disseminated to ensure that health disparities are not increased for those individuals already most underserved.</p>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="altmetric-donut">
+                    <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41588-019-0379-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-sm-1 abbr">
+                </div>
+                <div id="Kanai2018a" class="col-sm-8">
+                  <div class="title"><a href="https://dx.doi.org/10.1038/s41588-018-0047-6" target="_blank" rel="noopener">Genetic analysis of quantitative traits in the Japanese population links cell types to complex human diseases</a></div>
+                  <div class="author">
+                    <em>Kanai, M.</em>,
+                    <span class="coauthor">
+                      Akiyama, M.,
+                    </span>
+                    <span class="coauthor">
+                      Takahashi, A.,
+                    </span>
+                    <a class="coauthor etal visible" role="button">...,</a>
+                    <span class="coauthor etal">
+                      Matoba, N.,
+                    </span>
+                    <span class="coauthor etal">
+                      Momozawa, Y.,
+                    </span>
+                    <span class="coauthor etal">
+                      Ikeda, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Iwata, N.,
+                    </span>
+                    <span class="coauthor etal">
+                      Ikegawa, S.,
+                    </span>
+                    <span class="coauthor etal">
+                      Hirata, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Matsuda, K.,
+                    </span>
+                    <span class="coauthor etal">
+                      Kubo, M.,
+                    </span>
+                    <span class="coauthor etal">
+                      Okada, Y.,
+                    </span>
+                    and Kamatani, Y.
+                    <a class="coauthor etal" role="button">[Show fewer authors]</a>
+                  </div>
+                  <div class="periodical">
+                    <em>Nature Genetics</em>
+                    <b>50</b>,
+                    390–400
+                    (2018)
+                  </div>
+                  <div class="links">
+                    <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                    <a href="https://rdcu.be/clzFn" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+                    <a href="https://www.ncbi.nlm.nih.gov/pubmed/29403010" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
+                    <a href="http://www.riken.jp/pr/press/2018/20180206_1/" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
+                    <div class="altmetric-badge">
+                      <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41588-018-0047-6" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                    </div>
+                  </div>
+                  <!-- Hidden abstract block -->
+                  <div class="abstract hidden">
+                    <p>Clinical measurements can be viewed as useful intermediate phenotypes to promote understanding of complex human diseases. To acquire comprehensive insights into the underlying genetics, here we conducted a genome-wide association study (GWAS) of 58 quantitative traits in 162,255 Japanese individuals. Overall, we identified 1,407 trait-associated loci (P &lt; 5.0 \times 10-8), 679 of which were novel. By incorporating 32 additional GWAS results for complex diseases and traits in Japanese individuals, we further highlighted pleiotropy, genetic correlations, and cell-type specificity across quantitative traits and diseases, which substantially expands the current understanding of the associated genetics and biology. This study identified both shared polygenic effects and cell-type specificity, represented by the genetic links among clinical measurements, complex diseases, and relevant cell types. Our findings demonstrate that even without prior biological knowledge of cross-phenotype relationships, genetics corresponding to clinical measurements successfully recapture those measurements’ relevance to diseases, and thus can contribute to the elucidation of unknown etiology and pathogenesis.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="altmetric-donut">
+                        <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41588-018-0047-6" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-    
-
-    <div class="clearfix">
-      <p>I am a Ph.D. candidate in <a href="http://www.hms.harvard.edu/dms/big/" target="\_blank">the Bioinformatics and Integrative Genomics PhD Program</a>, Harvard Medical School. Co-advised by Drs. <a href="https://www.broadinstitute.org/bios/mark-daly" target="\_blank">Mark Daly</a> and <a href="https://www.broadinstitute.org/bios/hilary-finucane" target="\_blank">Hilary Finucane</a>, I am working at <a href="https://www.atgu.mgh.harvard.edu/" target="\_blank">the Analytic and Translational Genetics Unit</a>, Massachusetts General Hospital and affiliated with <a href="https://www.broadinstitute.org/medical-population-genetics" target="\_blank">the Medical and Population Genetics Program</a>, Broad Institute of MIT and Harvard. I received fellowships from <a href="http://www.nakajimafound.or.jp/" target="\_blank">the Nakajima Foundation</a> and <a href="https://masason-foundation.org/en/" target="\_blank">the Masason Foundation</a>.</p>
-
-<p>As a statistical geneticist, my research focuses on cross-population analysis of complex diseases and traits to better understand their genetic architecture and diversity across multiple populations. In my thesis project, I create a comprehensive atlas of putative causal variants from multiple large-scale biobanks to gain insights from complex trait fine-mapping across diverse populations. Prior to joining ATGU, I completed B.S. degree in Japan, where I worked closely with Dr. <a href="http://www.sg.med.osaka-u.ac.jp/" target="\_blank">Yukinori Okada</a> to study genetics of complex traits in the Japanese population using <a href="https://biobankjp.org/en/" target="\_blank">the BioBank Japan</a> data.</p>
-
-<p>My curriculum vitae can be found <span><nobr><a href="/assets/pdf/CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> here</a></nobr></span>.</p>
-
-    </div>
-
-    
-      <div class="news">
-  <h2>News</h2>
-  
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-      
-      
-        <tr>
-          <th scope="row">Sep 30, 2021</th>
-          <td>
-            
-              Added <a href="http://dx.doi.org/10.1038/s41588-021-00931-x" target="\_blank">*Sakaue, S &amp; *Kanai, M. et al. (2021)</a>.
-
-            
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Sep 6, 2021</th>
-          <td>
-            
-              Added <a href="http://dx.doi.org/10.1101/2021.09.03.21262975" target="\_blank">Kanai, M. et al. (2021)</a>.
-
-            
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Jul 8, 2021</th>
-          <td>
-            
-              Added <a href="https://dx.doi.org/10.1038/s41586-021-03767-x" target="\_blank">The COVID-19 Host Genetics Initiative (2021)</a>.
-
-            
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Jul 1, 2021</th>
-          <td>
-            
-              New website <img class="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20">
-
-            
-          </td>
-        </tr>
-      
-      </table>
-    </div>
-  
-</div>
-
-    
-
-    
-      <div class="publications">
-  <h2>Selected Publications and Preprints <small><a href="/publications">[full list]</a></small>
-</h2>
-  <p>Link to 
-    <a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a> | 
-    <a href="https://orcid.org/0000-0001-5165-4408" target="_blank" rel="noopener"><i class="ai ai-orcid"></i> ORCID</a> | 
-    <a href="https://www.ncbi.nlm.nih.gov/myncbi/masahiro.kanai.1/bibliography/public/" target="_blank" rel="noopener"><i class="ai ai-pubmed"></i> PubMed</a>
-  </p>
-  <p>* denotes equal contribution</p>
-  <ol class="bibliography">
-<li>
-<div class="row">
-  <div class="col-sm-1 abbr">
-  
-  </div>
-
-  <div id="Kanai2021" class="col-sm-8">
-    
-      <div class="title"><a href="https://dx.doi.org/10.1101/2021.09.03.21262975" target="_blank" rel="noopener">Insights from complex trait fine-mapping across diverse populations</a></div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>Kanai, M.</em>,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Ulirsch, J. C.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Karjalainen, J.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  <a class="coauthor etal visible" role="button">...,</a>
-                  
-                
-                <span class="coauthor etal">
-                  
-                    Kurki, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Karczewski, K. J.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Fauman, E. B.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Wang, Q. S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Jacobs, H.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Aguet, F.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Ardlie, K. G.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kerimov, N.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Alasoo, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Benner, C.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Ishigaki, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Sakaue, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Reilly, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    The BioBank Japan Project.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    FinnGen.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kamatani, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Matsuda, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Palotie, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Neale, B. M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Tewhey, R.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Sabeti, P. C.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Okada, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Daly, M. J.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Finucane, H. K.
-                
-              
-            
-          
-        
-        
-          <a class="coauthor etal" role="button">[Show fewer authors]</a>
-        
-        
+      <!-- Footer -->
+      <div class="social">
+        <div class="contact-icons">
+          <a href="mailto:%6D%6B%61%6E%61%69@%62%72%6F%61%64%69%6E%73%74%69%74%75%74%65.%6F%72%67"><i class="fas fa-envelope"></i></a>
+          <a href="https://orcid.org/0000-0001-5165-4408" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+          <a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://github.com/mkanai" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/masahiro-kanai-189492119" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/masakanai" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="/assets/pdf/CV.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
+        </div>
       </div>
-
-      <div class="periodical">
-      
-        <em>medRxiv</em>
-        
-        
-      
-      
-        (2021)
-      
-      </div>
-    
-
-    <div class="links">
-    
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    
-    
-    
-    
-    <a href="https://dx.doi.org/10.1101/2021.09.03.21262975" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
-    
-    
-    
-    
-    
-    
-    
-    
-      <a href="https://github.com/mkanai/finemapping-insights" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-    
-    
-      <a href="https://www.finucanelab.org/data" class="btn btn-sm z-depth-0" role="button" target="_blank">Data</a>
-    
-    
-    
-    
-    
-    
-      <div class="altmetric-badge">
-        <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1101/2021.09.03.21262975" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-      </div>
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>Despite the great success of genome-wide association studies (GWAS) in identifying genetic loci significantly associated with diseases, the vast majority of causal variants underlying disease-associated loci have not been identified. To create an atlas of causal variants, we performed and integrated fine-mapping across 148 complex traits in three large-scale biobanks (BioBank Japan, FinnGen, and UK Biobank; total n = 811,261), resulting in 4,518 variant-trait pairs with high posterior probability (&gt; 0.9) of causality. Of these, we found 285 high-confidence variant-trait pairs replicated across multiple populations, and we characterized multiple contributors to the surprising lack of overlap among fine-mapping results from different biobanks. By studying the bottlenecked Finnish and Japanese populations, we identified 21 and 26 putative causal coding variants with extreme allele frequency enrichment (&gt; 10-fold) in these two populations, respectively. Aggregating data across populations enabled identification of 1,492 unique fine-mapped coding variants and 176 genes in which multiple independent coding variants influence the same trait (i.e., with an allelic series of coding variants). Our results demonstrate that fine-mapping in diverse populations enables novel insights into the biology of complex traits by pinpointing high-confidence causal variants for further characterization.</p>
-    </div>
-    
-  </div>
-  <div class="col-sm-1">
-  
-    <div class="altmetric-donut">
-      <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/2021.09.03.21262975" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-    </div>
-  
-  </div>
-</div>
-</li>
-<li>
-<div class="row">
-  <div class="col-sm-1 abbr">
-  
-  </div>
-
-  <div id="Sakaue2021" class="col-sm-8">
-    
-      <div class="title"><a href="https://dx.doi.org/10.1038/s41588-021-00931-x" target="_blank" rel="noopener">A cross-population atlas of genetic associations for 220 human phenotypes</a></div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    *Sakaue, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>*Kanai, M.</em>,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Tanigawa, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  <a class="coauthor etal visible" role="button">...,</a>
-                  
-                
-                <span class="coauthor etal">
-                  
-                    Karjalainen, J.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kurki, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Koshiba, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Narita, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Konuma, T.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Yamamoto, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Akiyama, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Ishigaki, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Suzuki, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Suzuki, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Obara, W.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Yamaji, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Takahashi, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Asai, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Takahashi, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Suzuki, T.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Shinozaki, N.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Yamaguchi, H.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Minami, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Murayama, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Yoshimori, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Nagayama, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Obata, D.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Higashiyama, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Masumoto, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Koretsune, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Ito, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Terao, C.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Yamauchi, T.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Komuro, I.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kadowaki, T.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Tamiya, G.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Yamamoto, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Nakamura, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kubo, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Murakami, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Yamamoto, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kamatani, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Palotie, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Rivas, M. A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Daly, M. J.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Matsuda, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Okada, Y.
-                
-              
-            
-          
-        
-        
-          <a class="coauthor etal" role="button">[Show fewer authors]</a>
-        
-        
-      </div>
-
-      <div class="periodical">
-      
-        <em>Nature Genetics</em>
-        
-        <b>53</b>,
-        
-        
-        1415–1424
-        
-      
-      
-        (2021)
-      
-      </div>
-    
-
-    <div class="links">
-    
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    
-    
-    
-    
-    
-      
-      <a href="https://rdcu.be/cyG6p" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
-      
-    
-    
-    
-      <a href="https://www.ncbi.nlm.nih.gov/pubmed/34594039" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
-    
-    
-    
-      <a href="https://dx.doi.org/10.1101/2020.10.23.20213652" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">medRxiv</a>
-    
-    
-    
-    
-    
-    
-    
-      <a href="https://pheweb.jp/" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
-    
-    
-      <a href="https://www.med.osaka-u.ac.jp/eng/activities/results/2021year/okada2021-10-01" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
-    
-    
-      <div class="altmetric-badge">
-        <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41588-021-00931-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-      </div>
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>Current genome-wide association studies do not yet capture sufficient diversity in populations and scope of phenotypes. To expand an atlas of genetic associations in non-European populations, we conducted 220 deep-phenotype genome-wide association studies (diseases, biomarkers and medication usage) in BioBank Japan (n = 179,000), by incorporating past medical history and text-mining of electronic medical records. Meta-analyses with the UK Biobank and FinnGen (ntotal = 628,000) identified  5,000 new loci, which improved the resolution of the genomic map of human traits. This atlas elucidated the landscape of pleiotropy as represented by the major histocompatibility complex locus, where we conducted HLA fine-mapping. Finally, we performed statistical decomposition of matrices of phenome-wide summary statistics, and identified latent genetic components, which pinpointed responsible variants and biological mechanisms underlying current disease classifications across populations. The decomposed components enabled genetically informed subtyping of similar diseases (for example, allergic diseases). Our study suggests a potential avenue for hypothesis-free re-investigation of human diseases through genetics. Genome-wide analyses in BioBank Japan, UK Biobank and FinnGen identify  5,000 new loci associated with 220 human traits. Statistical decomposition of matrices of phenome-wide summary statistics further highlights variants underpinning diseases across populations.</p>
-    </div>
-    
-  </div>
-  <div class="col-sm-1">
-  
-    <div class="altmetric-donut">
-      <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41588-021-00931-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-    </div>
-  
-  </div>
-</div>
-</li>
-<li>
-<div class="row">
-  <div class="col-sm-1 abbr">
-  
-  </div>
-
-  <div id="The_COVID-19_Host_Genetics_Initiative2021a" class="col-sm-8">
-    
-      <div class="title"><a href="https://dx.doi.org/10.1038/s41586-021-03767-x" target="_blank" rel="noopener">Mapping the human genetic architecture of COVID-19</a></div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              The COVID-19 Host Genetics Initiative.
-            
-          
-        
-        
-        
-      </div>
-
-      <div class="periodical">
-      
-        <em>Nature</em>
-        
-        
-      
-      
-        (2021)
-      
-      </div>
-    
-
-    <div class="links">
-    
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    
-    
-    
-    
-    
-      
-      <a href="https://rdcu.be/cnZTx" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
-      
-    
-    
-    
-      <a href="https://www.ncbi.nlm.nih.gov/pubmed/34237774" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
-    
-    
-    
-      <a href="https://dx.doi.org/10.1101/2021.03.10.21252820" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">medRxiv</a>
-    
-    
-    
-    
-    
-    
-    
-      <a href="https://www.covid19hg.org/" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
-    
-    
-      <a href="https://www.broadinstitute.org/news/large-genomic-analysis-highlights-covid-19-risk-factors" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
-    
-    
-      <div class="altmetric-badge">
-        <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41586-021-03767-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-      </div>
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>The genetic makeup of an individual contributes to susceptibility and response to viral infection. While environmental, clinical and social factors play a role in exposure to SARS-CoV-2 and COVID-19 disease severity1,2, host genetics may also be important. Identifying host-specific genetic factors may reveal biological mechanisms of therapeutic relevance and clarify causal relationships of modifiable environmental risk factors for SARS-CoV-2 infection and outcomes. We formed a global network of researchers to investigate the role of human genetics in SARS-CoV-2 infection and COVID-19 severity. We describe the results of three genome-wide association meta-analyses comprised of up to 49,562 COVID-19 patients from 46 studies across 19 countries. We reported 13 genome-wide significant loci that are associated with SARS-CoV-2 infection or severe manifestations of COVID-19. Several of these loci correspond to previously documented associations to lung or autoimmune and inflammatory diseases3–7. They also represent potentially actionable mechanisms in response to infection. Mendelian Randomization analyses support a causal role for smoking and body mass index for severe COVID-19 although not for type II diabetes. The identification of novel host genetic factors associated with COVID-19, with unprecedented speed, was made possible by the community of human genetic researchers coming together to prioritize sharing of data, results, resources and analytical frameworks. This working model of international collaboration underscores what is possible for future genetic discoveries in emerging pandemics, or indeed for any complex human disease.</p>
-    </div>
-    
-  </div>
-  <div class="col-sm-1">
-  
-    <div class="altmetric-donut">
-      <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41586-021-03767-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-    </div>
-  
-  </div>
-</div>
-</li>
-<li>
-<div class="row">
-  <div class="col-sm-1 abbr">
-  
-  </div>
-
-  <div id="Weissbrod2021" class="col-sm-8">
-    
-      <div class="title"><a href="https://dx.doi.org/10.1101/2021.01.19.21249483" target="_blank" rel="noopener">Leveraging fine-mapping and non-European training data to improve trans-ethnic polygenic risk scores</a></div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    *Weissbrod, O.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>*Kanai, M.</em>,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    *Shi, H.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  <a class="coauthor etal visible" role="button">...,</a>
-                  
-                
-                <span class="coauthor etal">
-                  
-                    Gazal, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Peyrot, W.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Khera, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Okada, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    The Biobank Japan Project.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Martin, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Finucane, H.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Price, A. L.
-                
-              
-            
-          
-        
-        
-          <a class="coauthor etal" role="button">[Show fewer authors]</a>
-        
-        
-      </div>
-
-      <div class="periodical">
-      
-        <em>medRxiv</em>
-        
-        
-      
-      
-        (2021)
-      
-      </div>
-    
-
-    <div class="links">
-    
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    
-    
-    
-    
-    <a href="https://dx.doi.org/10.1101/2021.01.19.21249483" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
-    
-    
-    
-    
-    
-    
-    
-    
-      <a href="https://github.com/omerwe/polyfun" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-    
-    
-    
-    
-    
-    
-    
-      <div class="altmetric-badge">
-        <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1101/2021.01.19.21249483" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-      </div>
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>Polygenic risk scores (PRS) based on European training data suffer reduced accuracy in non-European target populations, exacerbating health disparities. This loss of accuracy predominantly stems from LD differences, MAF differences (including population-specific SNPs), and/or causal effect size differences. Here, we propose PolyPred, a method that improves trans-ethnic polygenic prediction by combining two complementary predictors: a new predictor that leverages functionally informed fine-mapping to estimate causal effects (instead of tagging effects), addressing LD differences; and BOLT-LMM, a published predictor. In the special case where a large training sample is available in the non-European target population (or a closely related population), we propose PolyPred+, which further incorporates the non-European training data, addressing MAF differences and causal effect size differences. We applied PolyPred to 49 diseases and complex traits in 4 UK Biobank populations using UK Biobank British training data (averageN=325K), and observed statistically significant average relative improvements in prediction accuracy vs. BOLT-LMM ranging from +7% in South Asians to +32% in Africans (and vs. LD-pruning + P-value thresholding (P+T) ranging from +77% to +164%), consistent with simulations. We applied PolyPred+ to 23 diseases and complex traits in UK Biobank East Asians using both UK Biobank British (averageN=325K) and Biobank Japan (averageN=124K) training data, and observed statistically significant average relative improvements in prediction accuracy of +24% vs. BOLT-LMM and +12% vs. PolyPred. In conclusion, PolyPred and PolyPred+ improve trans-ethnic polygenic prediction accuracy, ameliorating health disparities.</p>
-    </div>
-    
-  </div>
-  <div class="col-sm-1">
-  
-    <div class="altmetric-donut">
-      <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1101/2021.01.19.21249483" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-    </div>
-  
-  </div>
-</div>
-</li>
-<li>
-<div class="row">
-  <div class="col-sm-1 abbr">
-  
-  </div>
-
-  <div id="Sakaue2020a" class="col-sm-8">
-    
-      <div class="title"><a href="https://dx.doi.org/10.1038/s41591-020-0785-8" target="_blank" rel="noopener">Trans-biobank analysis with 676,000 individuals elucidates the association of polygenic risk scores of complex traits with human lifespan</a></div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    *Sakaue, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>*Kanai, M.</em>,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Karjalainen, J.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  <a class="coauthor etal visible" role="button">...,</a>
-                  
-                
-                <span class="coauthor etal">
-                  
-                    Akiyama, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kurki, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Matoba, N.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Takahashi, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Hirata, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kubo, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Matsuda, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Murakami, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Daly, M. J.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kamatani, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Okada, Y.
-                
-              
-            
-          
-        
-        
-          <a class="coauthor etal" role="button">[Show fewer authors]</a>
-        
-        
-      </div>
-
-      <div class="periodical">
-      
-        <em>Nature Medicine</em>
-        
-        <b>26</b>,
-        
-        
-        542–548
-        
-      
-      
-        (2020)
-      
-      </div>
-    
-
-    <div class="links">
-    
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    
-    
-    
-    
-    
-      
-      <a href="https://rdcu.be/cmhcK" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
-      
-    
-    
-    
-      <a href="https://www.ncbi.nlm.nih.gov/pubmed/32251405" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
-    
-    
-      <a href="https://dx.doi.org/10.1101/856351" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">bioRxiv</a>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      <a href="http://www.med.osaka-u.ac.jp/eng/activities/results/2020year/okada20200324" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
-    
-    
-      <div class="altmetric-badge">
-        <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41591-020-0785-8" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-      </div>
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>While polygenic risk scores (PRSs) are poised to be translated into clinical practice through prediction of inborn health risks1, a strategy to utilize genetics to prioritize modifiable risk factors driving heath outcome is warranted2. To this end, we investigated the association of the genetic susceptibility to complex traits with human lifespan in collaboration with three worldwide biobanks (ntotal = 675,898; BioBank Japan (n = 179,066), UK Biobank (n = 361,194) and FinnGen (n = 135,638)). In contrast to observational studies, in which discerning the cause-and-effect can be difficult, PRSs could help to identify the driver biomarkers affecting human lifespan. A high systolic blood pressure PRS was trans-ethnically associated with a shorter lifespan (hazard ratio = 1.03[1.02-1.04], Pmeta = 3.9 \times 10-13) and parental lifespan (hazard ratio = 1.06[1.06-1.07], P = 2.0 \times 10-86). The obesity PRS showed distinct effects on lifespan in Japanese and European individuals (Pheterogeneity = 9.5 \times 10-8 for BMI). The causal effect of blood pressure and obesity on lifespan was further supported by Mendelian randomization studies. Beyond genotype-phenotype associations, our trans-biobank study offers a new value of PRSs in prioritization of risk factors that could be potential targets of medical treatment to improve population health.</p>
-    </div>
-    
-  </div>
-  <div class="col-sm-1">
-  
-    <div class="altmetric-donut">
-      <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41591-020-0785-8" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-    </div>
-  
-  </div>
-</div>
-</li>
-<li>
-<div class="row">
-  <div class="col-sm-1 abbr">
-  
-  </div>
-
-  <div id="Martin2019" class="col-sm-8">
-    
-      <div class="title"><a href="https://dx.doi.org/10.1038/s41588-019-0379-x" target="_blank" rel="noopener">Clinical use of current polygenic risk scores may exacerbate health disparities</a></div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Martin, A. R.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>Kanai, M.</em>,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Kamatani, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  <a class="coauthor etal visible" role="button">...,</a>
-                  
-                
-                <span class="coauthor etal">
-                  
-                    Okada, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Neale, B. M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Daly, M. J.
-                
-              
-            
-          
-        
-        
-          <a class="coauthor etal" role="button">[Show fewer authors]</a>
-        
-        
-      </div>
-
-      <div class="periodical">
-      
-        <em>Nature Genetics</em>
-        
-        <b>51</b>,
-        
-        
-        584–591
-        
-      
-      
-        (2019)
-      
-      </div>
-    
-
-    <div class="links">
-    
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    
-    
-    
-    
-    
-      
-      <a href="https://rdcu.be/cmqUB" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
-      
-    
-    
-    
-      <a href="https://www.ncbi.nlm.nih.gov/pubmed/30926966" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
-    
-    
-      <a href="https://dx.doi.org/10.1101/441261" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">bioRxiv</a>
-    
-    
-    
-    
-      <a href="https://github.com/armartin/prs_disparities" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-    
-    
-    
-    
-    
-    
-      <a href="https://www.broadinstitute.org/news/study-highlights-need-increase-diversity-within-genetic-data-sets" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
-    
-    
-      <div class="altmetric-badge">
-        <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41588-019-0379-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-      </div>
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>Polygenic risk scores (PRS) are poised to improve biomedical outcomes via precision medicine. However, the major ethical and scientific challenge surrounding clinical implementation of PRS is that those available today are several times more accurate in individuals of European ancestry than other ancestries. This disparity is an inescapable consequence of Eurocentric biases in genome-wide association studies, thus highlighting that-unlike clinical biomarkers and prescription drugs, which may individually work better in some populations but do not ubiquitously perform far better in European populations-clinical uses of PRS today would systematically afford greater improvement for European-descent populations. Early diversifying efforts show promise in leveling this vast imbalance, even when non-European sample sizes are considerably smaller than the largest studies to date. To realize the full and equitable potential of PRS, greater diversity must be prioritized in genetic studies, and summary statistics must be publically disseminated to ensure that health disparities are not increased for those individuals already most underserved.</p>
-    </div>
-    
-  </div>
-  <div class="col-sm-1">
-  
-    <div class="altmetric-donut">
-      <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41588-019-0379-x" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-    </div>
-  
-  </div>
-</div>
-</li>
-<li>
-<div class="row">
-  <div class="col-sm-1 abbr">
-  
-  </div>
-
-  <div id="Kanai2018a" class="col-sm-8">
-    
-      <div class="title"><a href="https://dx.doi.org/10.1038/s41588-018-0047-6" target="_blank" rel="noopener">Genetic analysis of quantitative traits in the Japanese population links cell types to complex human diseases</a></div>
-      <div class="author">
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <em>Kanai, M.</em>,
-                
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Akiyama, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                <span class="coauthor">
-                  
-                    Takahashi, A.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  <a class="coauthor etal visible" role="button">...,</a>
-                  
-                
-                <span class="coauthor etal">
-                  
-                    Matoba, N.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Momozawa, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Ikeda, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Iwata, N.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Ikegawa, S.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Hirata, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Matsuda, K.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Kubo, M.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                <span class="coauthor etal">
-                  
-                    Okada, Y.,
-                  
-                </span>
-              
-            
-          
-        
-          
-          
-          
-          
-          
-          
-          
-            
-              
-                
-                  and Kamatani, Y.
-                
-              
-            
-          
-        
-        
-          <a class="coauthor etal" role="button">[Show fewer authors]</a>
-        
-        
-      </div>
-
-      <div class="periodical">
-      
-        <em>Nature Genetics</em>
-        
-        <b>50</b>,
-        
-        
-        390–400
-        
-      
-      
-        (2018)
-      
-      </div>
-    
-
-    <div class="links">
-    
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    
-    
-    
-    
-    
-      
-      <a href="https://rdcu.be/clzFn" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
-      
-    
-    
-    
-      <a href="https://www.ncbi.nlm.nih.gov/pubmed/29403010" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      <a href="http://www.riken.jp/pr/press/2018/20180206_1/" class="btn btn-sm z-depth-0" role="button" target="_blank">PR</a>
-    
-    
-      <div class="altmetric-badge">
-        <div data-badge-popover="bottom" data-badge-type="1" data-doi="10.1038/s41588-018-0047-6" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-      </div>
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>Clinical measurements can be viewed as useful intermediate phenotypes to promote understanding of complex human diseases. To acquire comprehensive insights into the underlying genetics, here we conducted a genome-wide association study (GWAS) of 58 quantitative traits in 162,255 Japanese individuals. Overall, we identified 1,407 trait-associated loci (P &lt; 5.0 \times 10-8), 679 of which were novel. By incorporating 32 additional GWAS results for complex diseases and traits in Japanese individuals, we further highlighted pleiotropy, genetic correlations, and cell-type specificity across quantitative traits and diseases, which substantially expands the current understanding of the associated genetics and biology. This study identified both shared polygenic effects and cell-type specificity, represented by the genetic links among clinical measurements, complex diseases, and relevant cell types. Our findings demonstrate that even without prior biological knowledge of cross-phenotype relationships, genetics corresponding to clinical measurements successfully recapture those measurements’ relevance to diseases, and thus can contribute to the elucidation of unknown etiology and pathogenesis.</p>
-    </div>
-    
-  </div>
-  <div class="col-sm-1">
-  
-    <div class="altmetric-donut">
-      <div data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/s41588-018-0047-6" data-hide-no-mentions="true" data-hide-less-than="50" class="altmetric-embed"></div>
-    </div>
-  
-  </div>
-</div>
-</li>
-</ol>
-</div>
-
-    
-  </article>
-</div>
-
-    </div>
-
-    <!-- Footer -->
-
-    <div class="social">
-  <div class="contact-icons">
-  <a href="mailto:%6D%6B%61%6E%61%69@%62%72%6F%61%64%69%6E%73%74%69%74%75%74%65.%6F%72%67"><i class="fas fa-envelope"></i></a>
-<a href="https://orcid.org/0000-0001-5165-4408" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
-<a href="https://scholar.google.com/citations?user=jb3AUMsAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-
-
-<a href="https://github.com/mkanai" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-<a href="https://www.linkedin.com/in/masahiro-kanai-189492119" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-<a href="https://twitter.com/masakanai" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-
-
-
-
-
-
-
-
-
-<a href="/assets/pdf/CV.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
-
-  </div>
-</div>
-
-
-<footer class="fixed-bottom">
-  <div class="container mt-0">
-    © Copyright 2021 Masahiro  Kanai.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme.
-
-    
-    
-    Last updated: <a href="https://github.com/mkanai/mkanai.github.io/commits/master" rel="noopener" target="_blank">November 12, 2021</a>.
-    
-  </div>
-</footer>
-
-
-
-  </body>
-
-  <!-- Bootsrap & MDB scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
-
-  
-<!-- Mansory & imagesLoaded -->
-<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
-
-
-  
-
-<!-- Load Altmetric -->
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-
-<!-- Scrolling Progress Bar -->
-<script type="text/javascript">
-  $(document).ready(function() {
-    var navbarHeight = $('#navbar').outerHeight(true);
-    $('body').css({ 'padding-top': navbarHeight });
-    $('progress-container').css({ 'padding-top': navbarHeight });
-    var progressBar = $('#progress');
-    progressBar.css({ 'top': navbarHeight });
-    var getMax = function() { return $(document).height() - $(window).height(); }
-    var getValue = function() { return $(window).scrollTop(); }
-    // Check if the browser supports the progress element.
-    if ('max' in document.createElement('progress')) {
-      // Set the 'max' attribute for the first time.
-      progressBar.attr({ max: getMax() });
-      progressBar.attr({ value: getValue() });
-
-      $(document).on('scroll', function() {
-        // On scroll only the 'value' attribute needs to be calculated.
-        progressBar.attr({ value: getValue() });
-      });
-
-      $(window).resize(function() {
+      <footer class="fixed-bottom">
+        <div class="container mt-0">
+          © Copyright 2021 Masahiro  Kanai.
+          Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme.
+          Last updated: <a href="https://github.com/mkanai/mkanai.github.io/commits/master" rel="noopener" target="_blank">November 12, 2021</a>.
+        </div>
+      </footer>
+    </body>
+    <!-- Bootsrap & MDB scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+    <!-- Mansory & imagesLoaded -->
+    <script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+    <!-- Load Altmetric -->
+    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+    <!-- Scrolling Progress Bar -->
+    <script type="text/javascript">
+      $(document).ready(function() {
         var navbarHeight = $('#navbar').outerHeight(true);
         $('body').css({ 'padding-top': navbarHeight });
         $('progress-container').css({ 'padding-top': navbarHeight });
+        var progressBar = $('#progress');
         progressBar.css({ 'top': navbarHeight });
-        // On resize, both the 'max' and 'value' attributes need to be calculated.
-        progressBar.attr({ max: getMax(), value: getValue() });
+        var getMax = function() { return $(document).height() - $(window).height(); }
+        var getValue = function() { return $(window).scrollTop(); }
+        // Check if the browser supports the progress element.
+        if ('max' in document.createElement('progress')) {
+          // Set the 'max' attribute for the first time.
+          progressBar.attr({ max: getMax() });
+          progressBar.attr({ value: getValue() });
+      
+          $(document).on('scroll', function() {
+            // On scroll only the 'value' attribute needs to be calculated.
+            progressBar.attr({ value: getValue() });
+          });
+      
+          $(window).resize(function() {
+            var navbarHeight = $('#navbar').outerHeight(true);
+            $('body').css({ 'padding-top': navbarHeight });
+            $('progress-container').css({ 'padding-top': navbarHeight });
+            progressBar.css({ 'top': navbarHeight });
+            // On resize, both the 'max' and 'value' attributes need to be calculated.
+            progressBar.attr({ max: getMax(), value: getValue() });
+          });
+        } else {
+          var max = getMax(), value, width;
+          var getWidth = function() {
+            // Calculate the window width as a percentage.
+            value = getValue();
+            width = (value/max) * 100;
+            width = width + '%';
+            return width;
+          }
+          var setWidth = function() { progressBar.css({ width: getWidth() }); };
+          setWidth();
+          $(document).on('scroll', setWidth);
+          $(window).on('resize', function() {
+            // Need to reset the 'max' attribute.
+            max = getMax();
+            setWidth();
+          });
+        }
       });
-    } else {
-      var max = getMax(), value, width;
-      var getWidth = function() {
-        // Calculate the window width as a percentage.
-        value = getValue();
-        width = (value/max) * 100;
-        width = width + '%';
-        return width;
-      }
-      var setWidth = function() { progressBar.css({ width: getWidth() }); };
-      setWidth();
-      $(document).on('scroll', setWidth);
-      $(window).on('resize', function() {
-        // Need to reset the 'max' attribute.
-        max = getMax();
-        setWidth();
-      });
-    }
-  });
-</script>
-
-<!-- Load Common JS -->
-<script src="/assets/js/common.js"></script>
-
-
-</html>
+    </script>
+    <!-- Load Common JS -->
+    <script src="/assets/js/common.js"></script>
+  </html>
