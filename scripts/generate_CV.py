@@ -5,8 +5,10 @@ import jinja2
 import os
 import string
 import subprocess
-import sys
 import yaml
+import numpy as np
+import re
+from pybtex.database import parse_file, Person
 
 from collections import defaultdict
 
@@ -37,6 +39,41 @@ def load_yaml(file, basedir=None):
     return yml
 
 
+def generate_new_bib(file, my_name_pat=re.compile("^\**Kanai, M"), max_first_authors=3, max_last_authors=2, required_bib_fields=set(["doi", "journal", "number", "pages", "year", "title", "volume", "keywords"])):
+    abbr_person = Person("{...}")
+    max_authors = max_first_authors + max_last_authors
+
+    bib = parse_file(file)
+    for key, entry in bib.entries.items():
+        # drop unnecessary fields
+        for field in set(entry.fields.keys()) - required_bib_fields:
+            del entry.fields[field]
+
+        authors = entry.persons["author"]
+        if len(authors) <= max_authors:
+            print(key, "Passed")
+            continue
+        # locate my name index
+        idx = np.where([bool(my_name_pat.match(str(author))) for author in authors])[0]
+        print(key, idx)
+
+        if len(idx) != 1:
+            raise ValueError()
+
+        idx = idx[0]
+        if idx <= max_first_authors:
+            # [0, 1, 2, 3, ..., -2, -1]
+            new_authors = authors[: (max_first_authors + 1)] + [abbr_person] + authors[-max_last_authors:]
+        else:
+            # [0, 1, 2, ..., idx, ..., -2, -1]
+            new_authors = authors[:max_first_authors] + [abbr_person, authors[idx], abbr_person] + authors[-max_last_authors:]
+        print(new_authors)
+
+        entry.persons["author"] = new_authors
+
+    bib.to_file(os.path.join(BASEDIR, "CV.abbr.bib"))
+
+
 def main(args):
     config = load_yaml(args.config)
 
@@ -44,6 +81,9 @@ def main(args):
         private = load_yaml(args.private)
     else:
         private = defaultdict(None)
+
+    if args.abbreviate_authors:
+        generate_new_bib(args.bib)
 
     data = defaultdict(None)
     for section in ['education', 'research', 'certification']:
@@ -57,6 +97,7 @@ def main(args):
     with io.open(out_fname, 'w', encoding='utf-8') as f:
         f.write(template.render(config = config,
                                 private = private,
+                                abbreviate_authors=args.abbreviate_authors,
                                 data = data,
                                 ascii_uppercase = string.ascii_uppercase))
 
@@ -78,10 +119,13 @@ if __name__ == '__main__':
     parser.add_argument('--config', default='../_config.yml', type=str)
     parser.add_argument('--private', default=None, type=str)
     parser.add_argument('--datadir', default='../_data', type=str)
+    parser.add_argument('--bib', default='../_bibliography/publications.bib', type=str)
+    parser.add_argument('--abbreviate-authors', action="store_true")
     args = parser.parse_args()
 
     args.config = os.path.join(BASEDIR, args.config)
     args.datadir = os.path.join(BASEDIR, args.datadir)
+    args.bib = os.path.join(BASEDIR, args.bib)
 
     main(args)
 

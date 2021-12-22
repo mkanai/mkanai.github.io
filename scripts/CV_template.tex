@@ -213,7 +213,11 @@
 % upshape misc title
 \DeclareFieldFormat[misc]{title}{#1}
 
+%% if abbreviate_authors
+\addbibresource{CV.abbr.bib}
+%% else
 \addbibresource{publications.bib}
+%% endif
 \addbibresource{review.en.bib}
 \addbibresource{international.bib}
 \addbibresource{domestic.en.bib}
