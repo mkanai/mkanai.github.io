@@ -13,20 +13,20 @@ from pybtex.database import parse_file, Person
 from collections import defaultdict
 
 BASEDIR = os.path.dirname(__file__)
-LATEX_TEMPLATE = 'CV_template.tex'
+LATEX_TEMPLATE = "CV_template.tex"
 
 latex_jinja_env = jinja2.Environment(
-    block_start_string = '\BLOCK{',
-    block_end_string = '}',
-    variable_start_string = '\VAR{',
-    variable_end_string = '}',
-    comment_start_string = '\#{',
-    comment_end_string = '}',
-    line_statement_prefix = '%%',
-    line_comment_prefix = '%#',
-    trim_blocks = True,
-    autoescape = False,
-    loader = jinja2.FileSystemLoader(BASEDIR)
+    block_start_string="\BLOCK{",
+    block_end_string="}",
+    variable_start_string="\VAR{",
+    variable_end_string="}",
+    comment_start_string="\#{",
+    comment_end_string="}",
+    line_statement_prefix="%%",
+    line_comment_prefix="%#",
+    trim_blocks=True,
+    autoescape=False,
+    loader=jinja2.FileSystemLoader(BASEDIR),
 )
 template = latex_jinja_env.get_template(LATEX_TEMPLATE)
 
@@ -34,12 +34,18 @@ template = latex_jinja_env.get_template(LATEX_TEMPLATE)
 def load_yaml(file, basedir=None):
     if basedir is not None:
         file = os.path.join(basedir, file)
-    with io.open(file, 'r', encoding='utf-8') as f:
+    with io.open(file, "r", encoding="utf-8") as f:
         yml = yaml.load(f, Loader=yaml.FullLoader)
     return yml
 
 
-def generate_new_bib(file, my_name_pat=re.compile("^\**Kanai, M"), max_first_authors=3, max_last_authors=2, required_bib_fields=set(["doi", "journal", "number", "pages", "year", "title", "volume", "keywords"])):
+def generate_new_bib(
+    file,
+    my_name_pat=re.compile("^\**Kanai, M"),
+    max_first_authors=3,
+    max_last_authors=2,
+    required_bib_fields=set(["doi", "journal", "number", "pages", "year", "title", "volume", "keywords"]),
+):
     abbr_person = Person("{...}")
     max_authors = max_first_authors + max_last_authors
 
@@ -66,7 +72,9 @@ def generate_new_bib(file, my_name_pat=re.compile("^\**Kanai, M"), max_first_aut
             new_authors = authors[: (max_first_authors + 1)] + [abbr_person] + authors[-max_last_authors:]
         else:
             # [0, 1, 2, ..., idx, ..., -2, -1]
-            new_authors = authors[:max_first_authors] + [abbr_person, authors[idx], abbr_person] + authors[-max_last_authors:]
+            new_authors = (
+                authors[:max_first_authors] + [abbr_person, authors[idx], abbr_person] + authors[-max_last_authors:]
+            )
         print(new_authors)
 
         entry.persons["author"] = new_authors
@@ -86,41 +94,45 @@ def main(args):
         generate_new_bib(args.bib)
 
     data = defaultdict(None)
-    for section in ['education', 'research', 'certification']:
-        fname = section + '.yml'
+    for section in ["education", "research", "certification"]:
+        fname = section + ".yml"
         if os.path.exists(fname):
             data[section] = load_yaml(fname, args.datadir)
         else:
             data[section] = defaultdict(None)
 
-    out_fname = args.out + '.xtex'
-    with io.open(out_fname, 'w', encoding='utf-8') as f:
-        f.write(template.render(config = config,
-                                private = private,
-                                abbreviate_authors=args.abbreviate_authors,
-                                data = data,
-                                ascii_uppercase = string.ascii_uppercase))
+    out_fname = args.out + ".xtex"
+    with io.open(out_fname, "w", encoding="utf-8") as f:
+        f.write(
+            template.render(
+                config=config,
+                private=private,
+                abbreviate_authors=args.abbreviate_authors,
+                data=data,
+                ascii_uppercase=string.ascii_uppercase,
+            )
+        )
 
-    cmd = ['latexmk', '-cd', '-f', '-pdf', out_fname]
+    cmd = ["latexmk", "-cd", "-f", "-pdf", out_fname]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()
     print(stdout)
     print(stderr)
 
     # cleanup
-    cmd = ['latexmk', '-c', out_fname]
+    cmd = ["latexmk", "-c", out_fname]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--out', default='CV', type=str)
-    parser.add_argument('--config', default='../_config.yml', type=str)
-    parser.add_argument('--private', default=None, type=str)
-    parser.add_argument('--datadir', default='../_data', type=str)
-    parser.add_argument('--bib', default='../_bibliography/publications.bib', type=str)
-    parser.add_argument('--abbreviate-authors', action="store_true")
+    parser.add_argument("--out", default="CV", type=str)
+    parser.add_argument("--config", default="../_config.yml", type=str)
+    parser.add_argument("--private", default=None, type=str)
+    parser.add_argument("--datadir", default="../_data", type=str)
+    parser.add_argument("--bib", default="../_bibliography/publications.bib", type=str)
+    parser.add_argument("--abbreviate-authors", action="store_true")
     args = parser.parse_args()
 
     args.config = os.path.join(BASEDIR, args.config)
