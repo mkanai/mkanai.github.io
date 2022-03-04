@@ -42,8 +42,8 @@ def load_yaml(file, basedir=None):
 def generate_new_bib(
     file,
     my_name_pat=re.compile("^\**Kanai, M"),
-    max_first_authors=3,
-    max_last_authors=2,
+    max_first_authors=5,
+    max_last_authors=5,
     required_bib_fields=set(["doi", "journal", "number", "pages", "year", "title", "volume", "keywords"]),
 ):
     abbr_person = Person("{...}")
@@ -67,9 +67,12 @@ def generate_new_bib(
             raise ValueError()
 
         idx = idx[0]
-        if idx <= max_first_authors:
+        if idx < max_first_authors:
+            # [0, 1, 2, ..., -2, -1]
+            new_authors = authors[:max_first_authors] + [abbr_person] + authors[-max_last_authors:]
+        elif idx == max_first_authors:
             # [0, 1, 2, 3, ..., -2, -1]
-            new_authors = authors[: (max_first_authors + 1)] + [abbr_person] + authors[-max_last_authors:]
+            new_authors = authors[:(max_first_authors + 1)] + [abbr_person] + authors[-max_last_authors:]
         else:
             # [0, 1, 2, ..., idx, ..., -2, -1]
             new_authors = (
