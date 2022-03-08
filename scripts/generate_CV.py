@@ -67,12 +67,12 @@ def generate_new_bib(
             raise ValueError()
 
         idx = idx[0]
-        if idx < max_first_authors:
+        k = (len(authors) - max_last_authors - 1)
+        if idx <= max_first_authors or idx >= k:
             # [0, 1, 2, ..., -2, -1]
-            new_authors = authors[:max_first_authors] + [abbr_person] + authors[-max_last_authors:]
-        elif idx == max_first_authors:
-            # [0, 1, 2, 3, ..., -2, -1]
-            new_authors = authors[:(max_first_authors + 1)] + [abbr_person] + authors[-max_last_authors:]
+            i = max_first_authors + (idx == max_first_authors)
+            j = max_last_authors + (idx == k and k != max_first_authors)
+            new_authors = authors[:i] + [abbr_person] + authors[-j:]
         else:
             # [0, 1, 2, ..., idx, ..., -2, -1]
             new_authors = (
