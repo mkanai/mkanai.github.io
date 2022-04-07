@@ -36,7 +36,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
+    
     gtag('config', 'G-BFKLBV2ZNN');
   </script>
 </head>
@@ -257,7 +257,7 @@
     <div class="container mt-0">
       &copy; Copyright 2022 Masahiro  Kanai.
       Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme.
-      Last updated: <a href="https://github.com/mkanai/mkanai.github.io/commits/master" rel="noopener" target="_blank">March 20, 2022</a>.
+      Last updated: <a href="https://github.com/mkanai/mkanai.github.io/commits/master" rel="noopener" target="_blank">April 07, 2022</a>.
     </div>
   </footer>
 </body>
@@ -286,12 +286,12 @@
       // Set the 'max' attribute for the first time.
       progressBar.attr({ max: getMax() });
       progressBar.attr({ value: getValue() });
-
+  
       $(document).on('scroll', function() {
         // On scroll only the 'value' attribute needs to be calculated.
         progressBar.attr({ value: getValue() });
       });
-
+  
       $(window).resize(function() {
         var navbarHeight = $('#navbar').outerHeight(true);
         $('body').css({ 'padding-top': navbarHeight });
