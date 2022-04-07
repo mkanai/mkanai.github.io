@@ -1,3 +1,16 @@
+@article{Weissbrod2022,
+author = {*Weissbrod, Omer and *Kanai, Masahiro and *Shi, Huwenbo and Gazal, Steven and Peyrot, Wouter J and Khera, Amit V and Okada, Yukinori and {The Biobank Japan Project} and Martin, Alicia R and Finucane, Hilary K and Price, Alkes L},
+doi = {10.1038/s41588-022-01036-9},
+journal = {Nature Genetics},
+month = {apr},
+title = {Leveraging fine-mapping and multipopulation training data to improve cross-population polygenic risk scores},
+year = {2022},
+keywords = {selected},
+abstract = {Polygenic risk scores suffer reduced accuracy in non-European populations, exacerbating health disparities. We propose PolyPred, a method that improves cross-population polygenic risk scores by combining two predictors: a new predictor that leverages functionally informed fine-mapping to estimate causal effects (instead of tagging effects), addressing linkage disequilibrium differences, and BOLT-LMM, a published predictor. When a large training sample is available in the non-European target population, we propose PolyPred+, which further incorporates the non-European training data. We applied PolyPred to 49 diseases/traits in four UK Biobank populations using UK Biobank British training data, and observed relative improvements versus BOLT-LMM ranging from +7\% in south Asians to +32\% in Africans, consistent with simulations. We applied PolyPred+ to 23 diseases/traits in UK Biobank east Asians using both UK Biobank British and Biobank Japan training data, and observed improvements of +24\% versus BOLT-LMM and +12\% versus PolyPred. Summary statistics-based analogs of PolyPred and PolyPred+ attained similar improvements. PolyPred and PolyPred+ methods that leverage fine-mapping and non-European training data significantly improve cross-population polygenic prediction accuracy when applied to diseases and complex traits in UK Biobank populations.},
+code = {https://github.com/omerwe/polyfun},
+data = {http://data.broadinstitute.org/alkesgroup/polypred_results},
+medrxiv = {10.1101/2021.01.19.21249483}
+}
 @article{Kanai2022,
 author = {Kanai, Masahiro and Elzur, Roy and Zhou, Wei and {Global Biobank Meta-analysis Initiative} and Daly, Mark J and Finucane, Hilary K},
 doi = {10.1101/2022.03.16.22272457},
@@ -364,17 +377,6 @@ biorxiv = {10.1101/803452},
 code = {https://github.com/huwenboshi/s-ldxr},
 pdf = {https://rdcu.be/clOBn},
 pubmed = {33597505}
-}
-@article{Weissbrod2021,
-author = {*Weissbrod, Omer and *Kanai, Masahiro and *Shi, Huwenbo and Gazal, Steven and Peyrot, Wouter and Khera, Amit and Okada, Yukinori and {The Biobank Japan Project} and Martin, Alicia and Finucane, Hilary and Price, Alkes L},
-doi = {10.1101/2021.01.19.21249483},
-journal = {medRxiv},
-month = {jan},
-title = {Leveraging fine-mapping and non-European training data to improve cross-population polygenic risk scores},
-year = {2021},
-keywords = {selected},
-abstract = {Polygenic risk scores (PRS) based on European training data suffer reduced accuracy in non-European target populations, exacerbating health disparities. This loss of accuracy predominantly stems from LD differences, MAF differences (including population-specific SNPs), and/or causal effect size differences. Here, we propose PolyPred, a method that improves trans-ethnic polygenic prediction by combining two complementary predictors: a new predictor that leverages functionally informed fine-mapping to estimate causal effects (instead of tagging effects), addressing LD differences; and BOLT-LMM, a published predictor. In the special case where a large training sample is available in the non-European target population (or a closely related population), we propose PolyPred+, which further incorporates the non-European training data, addressing MAF differences and causal effect size differences. We applied PolyPred to 49 diseases and complex traits in 4 UK Biobank populations using UK Biobank British training data (averageN=325K), and observed statistically significant average relative improvements in prediction accuracy vs. BOLT-LMM ranging from +7\% in South Asians to +32\% in Africans (and vs. LD-pruning + P-value thresholding (P+T) ranging from +77\% to +164\%), consistent with simulations. We applied PolyPred+ to 23 diseases and complex traits in UK Biobank East Asians using both UK Biobank British (averageN=325K) and Biobank Japan (averageN=124K) training data, and observed statistically significant average relative improvements in prediction accuracy of +24\% vs. BOLT-LMM and +12\% vs. PolyPred. In conclusion, PolyPred and PolyPred+ improve trans-ethnic polygenic prediction accuracy, ameliorating health disparities.},
-code = {https://github.com/omerwe/polyfun}
 }
 @article{Atkinson2021,
 author = {Atkinson, Elizabeth G and Maihofer, Adam X and Kanai, Masahiro and Martin, Alicia R and Karczewski, Konrad J and Santoro, Marcos L and Ulirsch, Jacob C and Kamatani, Yoichiro and Okada, Yukinori and Finucane, Hilary K and Koenen, Karestan C and Nievergelt, Caroline M and Daly, Mark J and Neale, Benjamin M},
