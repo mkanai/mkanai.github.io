@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper]{moderncv}
+\documentclass[11pt, letterpaper]{moderncv}
 
 % modern themes
 \definecolor{color1}{RGB}{52,73,94}
@@ -11,6 +11,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
+
+% fontawesome
+\usepackage{fontawesome}
 
 % adjust the page margins
 \usepackage[margin=0.8in]{geometry}
@@ -49,6 +52,10 @@
 \renewcommand*{\emailsymbol}         {\makebox[12pt]{\small\faEnvelopeO}~}
 \renewcommand*{\homepagesymbol}      {\makebox[12pt]{\small\faGlobe}~}
 \renewcommand*{\githubsocialsymbol}  {\makebox[12pt]{\small\faGithub}~}
+\renewcommand*{\twittersocialsymbol}  {\makebox[12pt]{\small\faTwitter}~}
+
+% fix itemize symbol problem
+\renewcommand*{\labelitemi}{\strut\raisebox{0.25ex}{\color{color1}{\tiny\faCircleO}}}
 
 % multiple emails for moderncvheadiii.sty
 % http://tex.stackexchange.com/questions/162441/add-a-second-website-in-moderncv-banking
@@ -244,10 +251,11 @@
 %% endif
 
 \emailA{mkanai@broadinstitute.org}
-\emailB{mkanai@g.harvard.edu}
+% \emailB{mkanai@g.harvard.edu}
 
 \homepage{mkanai.github.io}
 \social[github]{mkanai}
+\social[twitter]{masakanai}
 % \photo[56pt][0.2pt]{picture}
 
 \lhead{\textit{Curriculum Vitae}}
