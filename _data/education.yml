@@ -1,7 +1,7 @@
 en:
   - name: Harvard University
-    degree: Ph.D. candidate, <a href="http://www.hms.harvard.edu/dms/big/" target="_blank">Bioinformatics and Integrative Genomics Ph.D. Program</a>, Harvard Medical School
-    duration: Aug. 2017 - present
+    degree: Ph.D. in Biomedical Informatics, <a href="http://www.hms.harvard.edu/dms/big/" target="_blank">Bioinformatics and Integrative Genomics Ph.D. Program</a>, Harvard Medical School
+    duration: Aug. 2017 - May 2022
     location: Boston, USA
   - name: Keio University
     degree: B.S. in Bioinformatics, <a href="http://www.bio.keio.ac.jp/english/" target="_blank">Department of Biosciences and Informatics</a>
@@ -9,8 +9,8 @@ en:
     location: Yokohama, Japan
 ja:
   - name: Harvard University
-    degree: Ph.D. candidate, <a href="http://www.hms.harvard.edu/dms/big/" target="_blank">Bioinformatics and Integrative Genomics Ph.D. Program</a>, Harvard Medical School
-    duration: 2017/08 - 現在
+    degree: Ph.D. in Biomedical Informatics, <a href="http://www.hms.harvard.edu/dms/big/" target="_blank">Bioinformatics and Integrative Genomics Ph.D. Program</a>, Harvard Medical School
+    duration: 2017/08 - 2022/05
   - name: <a href="http://www.bio.keio.ac.jp/" target="_blank">慶應義塾大学 理工学部 生命情報学科</a>
     degree: 学士（理学）
     duration: 2013/04 - 2017/03
