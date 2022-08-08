@@ -41,7 +41,7 @@ def load_yaml(file, basedir=None):
 
 def generate_new_bib(
     file,
-    my_name_pat=re.compile("^\**Kanai, M"),
+    my_name_pat=re.compile("^\**Kanai, Masahiro"),
     max_first_authors=5,
     max_last_authors=5,
     required_bib_fields=set(["doi", "journal", "number", "pages", "year", "title", "volume", "keywords"]),

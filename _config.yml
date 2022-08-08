@@ -8,7 +8,7 @@ last_name: Kanai
 ja_name: 金井 仁弘
 email: mkanai@broadinstitute.org
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  PhD candidate in the Bioinformatics and Integrative Genomics Program, Harvard Medical School.
+  Postdoctoral Fellow at the Massachusetts General Hospital & the Broad Institute of MIT and Harvard.
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme.
 
