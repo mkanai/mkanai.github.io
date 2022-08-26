@@ -146,7 +146,7 @@ html[data-theme='dark'] .altmetric-donut { background-color: #e8e8e8; border-rad
 .content-section .cv-item { margin-bottom: 2rem; }
 .content-section .cv-item-title { font-weight: 700; font-size: 1.25rem; line-height: 1; color: var(--global-secondary-theme-color); }
 .content-section .cv-item-duration { color: var(--global-text-color-light); }
-@media (min-width: 768px) { .content-section .cv-item-duration { margin-bottom: -1rem; text-align: right; } }
+@media (min-width: 768px) { .content-section .cv-item-duration { margin-bottom: -1.25rem; text-align: right; } }
 .content-section .cv-item-details { font-size: 1rem; margin: 0 0 .75rem; line-height: 1; }
 .content-section .cv-item-details.award-title { font-size: 1rem; }
 .content-section .cv-item-title a, .content-section .cv-item-details a, .content-section .cv-item-copy a, .content-section .cv-item-list a { text-decoration: none; border-bottom: none; }
