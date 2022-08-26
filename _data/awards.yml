@@ -1,5 +1,8 @@
 en:
   - name: Reviewers’ Choice Abstract Award
+    details: <a href="https://www.ashg.org/meetings/2022-annual-meeting/" target="_blank">The American Society of Human Genetics 2022 Annual Meeting</a>
+    date: 2022
+  - name: Reviewers’ Choice Abstract Award
     details: <a href="https://www.ashg.org/meetings/2021meeting/" target="_blank">The American Society of Human Genetics 2021 Virtual Meeting</a>
     date: 2021
   - name: <a href="https://www.ashg.org/membership/awards/epstein/" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
@@ -25,8 +28,11 @@ en:
     date: 2010
 ja:
   - name: Reviewers’ Choice Abstract Award
+    details: <a href="https://www.ashg.org/meetings/2022-annual-meeting/" target="_blank">アメリカ人類遺伝学会2022年大会</a>
+    date: 2022
+  - name: Reviewers’ Choice Abstract Award
     details: <a href="https://www.ashg.org/meetings/2021meeting/" target="_blank">アメリカ人類遺伝学会2021年大会</a>
-    date: 2019
+    date: 2021
   - name: <a href="https://www.ashg.org/membership/awards/epstein/" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
     details: <a href="https://www.ashg.org/wp-content/uploads/2020/08/ASHG20-Epstein-trainee.pdf" target="_blank">Finalist (Predoctoral)</a>, <a href="https://www.ashg.org/meetings/2020meeting/" target="_blank">アメリカ人類遺伝学会2020年大会</a>
     date: 2020

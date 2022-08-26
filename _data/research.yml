@@ -1,11 +1,17 @@
 en:
   - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
+    position: Research Fellow, Center for Computational and Integrative Biology
+    duration: Aug. 2022 - present
+    advisor: Dr. Ramnik Xavier
+  - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
     position: Graduate Student, Analytic and Translational Genetics Unit 
-    duration: Jan. 2018 - present
+    duration: Jan. 2018 - May 2022
     advisor: Drs. Mark Daly & Hilary Finucane
   - name: Osaka University Graduate School of Medicine
-    position: Research Student, Department of Statistical Genetics
-    duration: Apr. 2017 - present
+    position: Visiting Fellow, Department of Statistical Genetics
+    duration: July 2022 - present
+    position2: Research Student, Department of Statistical Genetics
+    duration2: Apr. 2017 - June 2022
     advisor: Dr. Yukinori Okada
   - name: RIKEN Center for Integrative Medical Sciences
     position: Research Assistant, Laboratory for Statistical Analysis
@@ -21,12 +27,18 @@ en:
     advisor: Drs. Yukinori Okada & Toshihiro Tanaka
 ja:
   - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
+    position: 博士研究員 (Research Fellow), Center for Computational and Integrative Biology
+    duration: 2022/08 - 現在
+    advisor: Dr. Ramnik Xavier
+  - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
     position: 大学院生 (Ph.D.), Analytic and Translational Genetics Unit
-    duration: 2018/01 - 現在
+    duration: 2018/01 - 2022/05
     advisor: Drs. Mark Daly & Hilary Finucane
   - name: 大阪大学大学院 医学系研究科 遺伝統計学
-    position: 特別研究生
-    duration: 2017/04 - 現在
+    position: 招聘教員
+    duration: 2022/07 - 現在
+    position2: 特別研究生
+    duration2: 2017/04 - 2022/06
     advisor: 岡田 随象 先生
   - name: 理化学研究所 統合生命医科学研究センター 統計解析研究チーム
     position: 研修生

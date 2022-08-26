@@ -32,6 +32,12 @@ layout: default
           {% if item.position %}
           <h4 class="cv-item-details">{{ item.position }}</h4>
           {% endif %}
+          {% if item.duration2 %}
+          <p class="cv-item-duration">{{ item.duration2 }}</p>
+          {% endif %}
+          {% if item.position2 %}
+          <p class="cv-item-details">{{ item.position2 }}</p>
+          {% endif %}
           {% if item.advisor %}
           <p class="cv-item-details">Advisor: {{ item.advisor }}</p>
           {% endif %}
