@@ -579,6 +579,14 @@ footer.sticky-bottom {
   }
 }
 
+// Search form
+input.form-control {
+  &:focus {
+    border-color: var(--global-hover-color);
+    box-shadow: 0 0 0 0.2rem rgba($green-color-light, .25);
+  }
+}
+
 // Altmetric
 @media (max-width: 575px) {
   .altmetric-badge {

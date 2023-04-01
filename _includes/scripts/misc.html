@@ -60,3 +60,8 @@ $(function () {$('[data-toggle="tooltip"]').tooltip()})
 
 <!-- Load Common JS -->
 <script src="{{ '/assets/js/common.js' | relative_url }}"></script>
+
+{% if page.title == "Publications" %}
+<!-- Load search bib -->
+<script src="{{ '/assets/js/search_bibliographies.js' | relative_url }}"></script>
+{% endif %}
