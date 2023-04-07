@@ -25,7 +25,7 @@ redirect_from:
       </li>
     </ul>
   </div>
-  <div class="col-sm-3 mt-auto">
+  <div class="col-sm-3 mt-auto pt-3">
     <input type="text" class="form-control" id="search-input" placeholder="Search...">
   </div>
 </div>
