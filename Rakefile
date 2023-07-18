@@ -9,7 +9,7 @@ require 'jekyll'
 
 desc "Generate CV"
 task :generate_CV do
-  system "cd scripts && python ./generate_CV.py --abbreviate-authors && cd .."
+  system "cd scripts && ln -sf ../_bibliography/*.bib . && python ./generate_CV.py --abbreviate-authors && cd .."
   # system "cd scripts && python ./generate_CV.py && cd .."
   system "mv scripts/CV.pdf assets/pdf/"
 end
