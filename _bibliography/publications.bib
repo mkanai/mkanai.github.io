@@ -1,3 +1,16 @@
+@article{Cui2023,
+author = {Cui, Ran and Elzur, Roy A and Kanai, Masahiro and Ulirsch, Jacob C and Weissbrod, Omer and Daly, Mark J and Neale, Benjamin M and Fan, Zhou and Finucane, Hilary K},
+doi = {10.1038/s41588-023-01597-3},
+journal = {Nature Genetics},
+month = {nov},
+title = {Improving fine-mapping by modeling infinitesimal effects},
+year = {2023},
+abstract = {Fine-mapping aims to identify causal genetic variants for phenotypes. Bayesian fine-mapping algorithms (for example, SuSiE, FINEMAP, ABF and COJO-ABF) are widely used, but assessing posterior probability calibration remains challenging in real data, where model misspecification probably exists, and true causal variants are unknown. We introduce replication failure rate (RFR), a metric to assess fine-mapping consistency by downsampling. SuSiE, FINEMAP and COJO-ABF show high RFR, indicating potential overconfidence in their output. Simulations reveal that nonsparse genetic architecture can lead to miscalibration, while imputation noise, nonuniform distribution of causal variants and quality control filters have minimal impact. Here we present SuSiE-inf and FINEMAP-inf, fine-mapping methods modeling infinitesimal effects alongside fewer larger causal effects. Our methods show improved calibration, RFR and functional enrichment, competitive recall and computational efficiency. Notably, using our methods' posterior effect sizes substantially increases polygenic risk score accuracy over SuSiE and FINEMAP. Our work improves causal variant identification for complex traits, a fundamental goal of human genetics. A downsampling approach to assess causal variant fine-mapping, replication failure rate, finds that commonly used methods may be miscalibrated. Simulations suggest this is probably due to a nonsparse genetic architecture model misspecification. Incorporating infinitesimal effects in the SuSiE and FINEMAP frameworks improves performance.},
+biorxiv = {10.1101/2022.10.21.513123},
+code = {https://github.com/FinucaneLab/fine-mapping-inf},
+pdf = {https://rdcu.be/dswl2},
+pubmed = {38036779}
+}
 @article{Kerimov2023,
 author = {Kerimov, Nurlan and Tambets, Ralf and Hayhurst, James D and Rahu, Ida and Kolberg, Peep and Raudvere, Uku and Kuzmin, Ivan and Chowdhary, Anshika and Vija, Andreas and Teras, Hans J and Kanai, Masahiro and Ulirsch, Jacob and Ryten, Mina and Hardy, John and Guelfi, Sebastian and Trabzuni, Daniah and Kim-Hellmuth, Sarah and Rayner, William and Finucane, Hilary and Peterson, Hedi and Mosaku, Abayomi and Parkinson, Helen and Alasoo, Kaur},
 doi = {10.1371/journal.pgen.1010932},
@@ -15,15 +28,19 @@ pubmed = {37721944},
 website = {https://www.ebi.ac.uk/eqtl/}
 }
 @article{Wang_Y2023b,
-author = {Wang, Ying and Kanai, Masahiro and Tan, Taotao and Kamariza, Mireille and Tsuo, Kristin and Yuan, Kai and Zhou, Wei and Okada, Yukinori and Huang, Hailiang and Turley, Patrick and Atkinson, Elizabeth G and Martin, Alicia R},
+author = {Wang, Ying and Kanai, Masahiro and Tan, Taotao and Kamariza, Mireille and Tsuo, Kristin and Yuan, Kai and Zhou, Wei and Okada, Yukinori and {BioBank Japan Project} and Huang, Hailiang and Turley, Patrick and Atkinson, Elizabeth G and Martin, Alicia R},
 doi = {10.1016/j.xgen.2023.100408},
 journal = {Cell Genomics},
-month = {sep},
+month = {oct},
+number = {10},
+pages = {100408},
 title = {Polygenic prediction across populations is influenced by ancestry, genetic architecture, and methodology},
+volume = {3},
 year = {2023},
 abstract = {Polygenic risk scores (PRSs) developed from multi-ancestry genome-wide association studies (GWASs), PRSmulti, hold promise for improving PRS accuracy and generalizability across populations. To establish best practices for leveraging the increasing diversity of genomic studies, we investigated how various factors affect the performance of PRSmulti compared with PRSs constructed from single-ancestry GWASs (PRSsingle). Through extensive simulations and empirical analyses, we showed that PRSmulti overall outperformed PRSsingle in understudied populations, except when the understudied population represented a small proportion of the multi-ancestry GWAS. Furthermore, integrating PRSs based on local ancestry-informed GWASs and large-scale, European-based PRSs improved predictive performance in understudied African populations, especially for less polygenic traits with large-effect ancestry-enriched variants. Our work highlights the importance of diversifying genomic studies to achieve equitable PRS performance across ancestral populations and provides guidance for developing PRSs from multiple studies.},
 biorxiv = {10.1101/2022.12.29.522270},
-pdf = {https://www.cell.com/cell-genomics/pdfExtended/S2666-979X(23)00222-7}
+pdf = {https://www.cell.com/cell-genomics/pdfExtended/S2666-979X(23)00222-7},
+pubmed = {37868036}
 }
 @article{The_COVID-19_Host_Genetics_Initiative2023,
 author = {{The COVID-19 Host Genetics Initiative}},
@@ -135,7 +152,10 @@ author = {Ogawa, Kotaro and Tsoi, Lam C and Tanaka, Hiroaki and Kanai, Masahiro 
 doi = {10.1016/j.jid.2023.01.037},
 journal = {Journal of Investigative Dermatology},
 month = {mar},
+number = {9},
+pages = {1813--1816.e2},
 title = {A cross-trait genetic correlation study identified eight diseases and traits associated with psoriasis},
+volume = {143},
 year = {2023},
 pubmed = {36906125}
 }
@@ -258,17 +278,6 @@ year = {2022},
 keywords = {preprint},
 abstract = {Translating genome-wide association study (GWAS) loci into causal variants and genes requires accurate cell-type-specific enhancer-gene maps from disease-relevant tissues. Building enhancer-gene maps is essential but challenging with current experimental methods in primary human tissues. We developed a new non-parametric statistical method, SCENT (Single-Cell ENhancer Target gene mapping) which models association between enhancer chromatin accessibility and gene expression in single-cell multimodal RNA-seq and ATAC-seq data. We applied SCENT to 9 multimodal datasets including > 120,000 single cells and created 23 cell-type-specific enhancer-gene maps. These maps were highly enriched for causal variants in eQTLs and GWAS for 1,143 diseases and traits. We identified likely causal genes for both common and rare diseases. In addition, we were able to link somatic mutation hotspots to target genes. We demonstrate that application of SCENT to multimodal data from disease-relevant human tissue enables the scalable construction of accurate cell-type-specific enhancer-gene maps, essential for defining variant function.},
 code = {https://github.com/immunogenomics/SCENT}
-}
-@article{Cui2022,
-author = {Cui, Ran and Elzur, Roy A and Kanai, Masahiro and Ulirsch, Jacob C and Weissbrod, Omer and Daly, Mark J and Neale, Benjamin M and Fan, Zhou and Finucane, Hilary K},
-doi = {10.1101/2022.10.21.513123},
-journal = {bioRxiv},
-month = {oct},
-title = {Improving fine-mapping by modeling infinitesimal effects},
-year = {2022},
-keywords = {preprint},
-abstract = {Fine-mapping aims to identify genetic variants that causally impact a given phenotype. State-of-the-art Bayesian fine-mapping algorithms (for example: SuSiE, FINEMAP, ABF, and COJO-ABF) are widely applied in practice, but it remains challenging to assess their calibration (i.e., whether or not the posterior probability of causality reflects the true proportion of causal variants) in real data, where model misspecification almost certainly exists and true causal variants are unknown. Here, we present the Replication Failure Rate (RFR), a metric to assess the consistency of fine-mapping results based on downsampling a large cohort. Empirical evaluation of fine-mapping results from SuSiE, FINEMAP and COJO-ABF suggest that these methods may be miscalibrated in the under-conservative direction. Next, we show in simulations that non-sparse genetic architecture can lead to miscalibration, while imputation noise, non-normal effect size distributions, and quality control filters removing potentially causal variants are less likely contributors. Here, we present two new fine-mapping methods, SuSiE-inf and FINEMAP-inf, that extend SuSiE and FINEMAP to incorporate a term for infinitesimal effects in addition to a small number of larger causal effects of interest. Our methods exhibit better calibration in simulations and improved RFR and functional enrichment in real data, with minimal loss of recall and competitive computational cost. Furthermore, using the sparse fine-mapped variants identified by our methods to perform cross-population genetic risk prediction in the UK Biobank, we observed a substantial increase in predictive accuracy over SuSiE and FINEMAP. Our work improves our ability to pinpoint causal variants for complex traits, a fundamental goal of human genetics.},
-code = {https://github.com/FinucaneLab/fine-mapping-inf}
 }
 @article{Zhou2022,
 author = {Zhou, Wei and Kanai, Masahiro and Wu, Kuan-Han H and Rasheed, Humaira and Tsuo, Kristin and Hirbo, Jibril B and Wang, Ying and Bhattacharya, Arjun and Zhao, Huiling and Namba, Shinichi and Surakka, Ida and Wolford, Brooke N and Lo Faro, Valeria and Lopera-Maya, Esteban A and L{\"a}ll, Kristi and Fav{\'e}, Marie-Julie and Partanen, Juulia J and Chapman, Sin{\'e}ad B and Karjalainen, Juha and Kurki, Mitja and Maasha, Mutaamba and Brumpton, Ben M and Chavan, Sameer and Chen, Tzu-Ting and Daya, Michelle and Ding, Yi and Feng, Yen-Chen A and Guare, Lindsay A and Gignoux, Christopher R and Graham, Sarah E and Hornsby, Whitney E and Ingold, Nathan and Ismail, Said I and Johnson, Ruth and Laisk, Triin and Lin, Kuang and Lv, Jun and Millwood, Iona Y and Moreno-Grau, Sonia and Nam, Kisung and Palta, Priit and Pandit, Anita and Preuss, Michael H and Saad, Chadi and Setia-Verma, Shefali and Thorsteinsdottir, Unnur and Uzunovic, Jasmina and Verma, Anurag and Zawistowski, Matthew and Zhong, Xue and Afifi, Nahla and Al-Dabhani, Kawthar M and Al Thani, Asma and Bradford, Yuki and Campbell, Archie and Crooks, Kristy and de Bock, Geertruida H and Damrauer, Scott M and Douville, Nicholas J and Finer, Sarah and Fritsche, Lars G and Fthenou, Eleni and Gonzalez-Arroyo, Gilberto and Griffiths, Christopher J and Guo, Yu and Hunt, Karen A and Ioannidis, Alexander and Jansonius, Nomdo M and Konuma, Takahiro and Lee, Ming Ta Michael and Lopez-Pineda, Arturo and Matsuda, Yuta and Marioni, Riccardo E and Moatamed, Babak and Nava-Aguilar, Marco A and Numakura, Kensuke and Patil, Snehal and Rafaels, Nicholas and Richmond, Anne and Rojas-Mu{\~n}oz, Agustin and Shortt, Jonathan A and Straub, Peter and Tao, Ran and Vanderwerff, Brett and Vernekar, Manvi and Veturi, Yogasudha and Barnes, Kathleen C and Boezen, Marike and Chen, Zhengming and Chen, Chia-Yen and Cho, Judy and Smith, George Davey and Finucane, Hilary K and Franke, Lude and Gamazon, Eric R and Ganna, Andrea and Gaunt, Tom R and Ge, Tian and Huang, Hailiang and Huffman, Jennifer and Katsanis, Nicholas and Koskela, Jukka T and Lajonchere, Clara and Law, Matthew H and Li, Liming and Lindgren, Cecilia M and Loos, Ruth J F and MacGregor, Stuart and Matsuda, Koichi and Olsen, Catherine M and Porteous, David J and Shavit, Jordan A and Snieder, Harold and Takano, Tomohiro and Trembath, Richard C and Vonk, Judith M and Whiteman, David C and Wicks, Stephen J and Wijmenga, Cisca and Wright, John and Zheng, Jie and Zhou, Xiang and Awadalla, Philip and Boehnke, Michael and Bustamante, Carlos D and Cox, Nancy J and Fatumo, Segun and Geschwind, Daniel H and Hayward, Caroline and Hveem, Kristian and Kenny, Eimear E and Lee, Seunggeun and Lin, Yen-Feng and Mbarek, Hamdi and M{\"a}gi, Reedik and Martin, Hilary C and Medland, Sarah E and Okada, Yukinori and Palotie, Aarno V and Pasaniuc, Bogdan and Rader, Daniel J and Ritchie, Marylyn D and Sanna, Serena and Smoller, Jordan W and Stefansson, Kari and van Heel, David A and Walters, Robin G and Z{\"o}llner, Sebastian and Martin, Alicia R and Willer, Cristen J and Daly, Mark J and Neale, Benjamin M},
