@@ -48,7 +48,7 @@ module Jekyll
               arr << parts
 
               # add rendered author names
-              ne = BibTeX::Entry.new(author: BibTeX::Names.new(BibTeX::Name.new(first: parts['first'], last: parts['last'])))
+              ne = BibTeX::Entry.new(author: BibTeX::Names.new(BibTeX::Name.new(first: parts['first'], last: parts['last'].sub('#', ''))))
               citation_item = CiteProc::CitationItem.new do |c|
                 c.data = CiteProc::Item.new ne.to_citeproc
               end

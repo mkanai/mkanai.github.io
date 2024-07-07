@@ -41,7 +41,8 @@ def load_yaml(file, basedir=None):
 
 def generate_new_bib(
     file,
-    my_name_pat=re.compile("^\**Kanai, Masahiro"),
+    my_name_pat=re.compile("^[\*#]*Kanai, Masahiro"),
+    corresponding_pat=re.compile("#"),
     max_first_authors=5,
     max_last_authors=5,
     required_bib_fields=set(["doi", "journal", "number", "pages", "year", "title", "volume", "keywords"]),
@@ -56,18 +57,23 @@ def generate_new_bib(
             del entry.fields[field]
 
         authors = entry.persons["author"]
-        if len(authors) <= max_authors:
-            print(key, "Passed")
-            continue
         # locate my name index
         idx = np.where([bool(my_name_pat.match(str(author))) for author in authors])[0]
         print(key, idx)
+
+        # corresponding symbol
+        for author in authors:
+            author.last_names[0] = corresponding_pat.sub("", author.last_names[0])
+
+        if len(authors) <= max_authors:
+            print(key, "Passed")
+            continue
 
         if len(idx) != 1:
             raise ValueError()
 
         idx = idx[0]
-        k = (len(authors) - max_last_authors - 1)
+        k = len(authors) - max_last_authors - 1
         if idx <= max_first_authors or idx >= k:
             # [0, 1, 2, ..., -2, -1]
             i = max_first_authors + (idx == max_first_authors)
@@ -143,4 +149,3 @@ if __name__ == "__main__":
     args.bib = os.path.join(BASEDIR, args.bib)
 
     main(args)
-
