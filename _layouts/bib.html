@@ -20,7 +20,7 @@
       <div class="author">
         {% for author in entry.author_array %}
           {% assign author_is_self = false %}
-          {% assign author_last_stripped = author.last | remove: "*" %}
+          {% assign author_last_stripped = author.last | remove: "*" | remove: "#" %}
           {% if author_last_stripped == site.scholar.last_name %}
             {% if site.scholar.first_name contains author.first%}
               {% assign author_is_self = true %}
