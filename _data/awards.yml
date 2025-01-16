@@ -1,4 +1,7 @@
 en:
+  - name: Innovators Under 35 Japan
+    details: <a href="https://www.innovatorsunder35.com/the-list/masahiro-kanai/" target="_blank">MIT Technology Review</a>
+    date: 2024
   - name: Reviewers’ Choice Abstract Award
     details: <a href="https://www.ashg.org/meetings/2022-annual-meeting/" target="_blank">The American Society of Human Genetics 2022 Annual Meeting</a>
     date: 2022
@@ -27,6 +30,9 @@ en:
     details: Microsoft Imagine Cup 2010 Software Design Competition
     date: 2010
 ja:
+  - name: Innovators Under 35 Japan
+    details: <a href="https://www.technologyreview.jp/l/innovators_jp/348579/masahiro-kanai/" target="_blank">MIT Technology Review</a>
+    date: 2024
   - name: Reviewers’ Choice Abstract Award
     details: <a href="https://www.ashg.org/meetings/2022-annual-meeting/" target="_blank">アメリカ人類遺伝学会2022年大会</a>
     date: 2022
