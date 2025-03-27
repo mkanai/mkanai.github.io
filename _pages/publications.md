@@ -35,9 +35,9 @@ redirect_from:
 {% for y in page.years %}
   <h2 class="year" id="{{y}}">{{y}}</h2>
   {% if y == "Preprints" %}
-    {% bibliography -f publications -q @*[journal~=Rxiv$] --label reset %}
+    {% bibliography -f publications -q @*[journal~=Rxiv$ || journal=Research Square] --label reset %}
   {% else %}
-    {% bibliography -f publications -q @*[year={{y}} && journal!~Rxiv$] %}
+    {% bibliography -f publications -q @*[year={{y}} && journal!~Rxiv$ && journal!=Research Square] %}
   {% endif %}
 {% endfor %}
 
