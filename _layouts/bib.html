@@ -16,7 +16,7 @@
     {% if entry.type == "thesis" %}
       {{reference}}
     {% else %}
-      <div class="title"><a href="https://dx.doi.org/{{entry.doi}}" target="_blank" rel="noopener">{{entry.title}}</a></div>
+      <div class="title"><a href="https://doi.org/{{entry.doi}}" target="_blank" rel="noopener">{{entry.title}}</a></div>
       <div class="author">
         {% for author in entry.author_array %}
           {% assign author_is_self = false %}
@@ -118,7 +118,7 @@
       <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button" target="_blank">HTML</a>
     {% endif %}
     {% if entry.journal == "bioRxiv" or entry.journal == "medRxiv" %}
-    <a href="https://dx.doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
+    <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
     {% endif %}
     {% if entry.pdf %}
       {% if entry.pdf contains '://' %}
@@ -138,10 +138,10 @@
       <a href="https://www.ncbi.nlm.nih.gov/pubmed/{{ entry.pubmed }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PubMed</a>
     {% endif %}
     {% if entry.biorxiv %}
-      <a href="https://dx.doi.org/{{ entry.biorxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">bioRxiv</a>
+      <a href="https://doi.org/{{ entry.biorxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">bioRxiv</a>
     {% endif %}
     {% if entry.medrxiv %}
-      <a href="https://dx.doi.org/{{ entry.medrxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">medRxiv</a>
+      <a href="https://doi.org/{{ entry.medrxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">medRxiv</a>
     {% endif %}
     {% if entry.blog %}
       <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Blog</a>
