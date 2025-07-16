@@ -1,7 +1,9 @@
 en:
   - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
-    position: Research Fellow, Center for Computational and Integrative Biology
-    duration: Aug. 2022 - present
+    position: Instructor in Medicine
+    duration: July 2025 - present
+    position2: Research Fellow, Center for Computational and Integrative Biology
+    duration2: Aug. 2022 - June 2025
     advisor: Dr. Ramnik Xavier
   - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
     position: Graduate Student, Analytic and Translational Genetics Unit 
@@ -27,8 +29,10 @@ en:
     advisor: Drs. Yukinori Okada & Toshihiro Tanaka
 ja:
   - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
-    position: 博士研究員 (Research Fellow), Center for Computational and Integrative Biology
-    duration: 2022/08 - 現在
+    position: Instructor in Medicine
+    duration: 2025/07 - 現在
+    position2: 博士研究員 (Research Fellow), Center for Computational and Integrative Biology
+    duration2: 2022/08 - 2025/06
     advisor: Dr. Ramnik Xavier
   - name: Massachusetts General Hospital & Broad Institute of MIT and Harvard
     position: 大学院生 (Ph.D.), Analytic and Translational Genetics Unit
