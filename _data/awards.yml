@@ -1,18 +1,21 @@
 en:
+  - name: Reviewers’ Choice Abstract Award
+    details: <a href="https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf" target="_blank">The American Society of Human Genetics 2025 Annual Meeting</a>
+    date: 2025
   - name: Innovators Under 35 Japan
     details: <a href="https://www.innovatorsunder35.com/the-list/masahiro-kanai/" target="_blank">MIT Technology Review</a>
     date: 2024
   - name: Reviewers’ Choice Abstract Award
-    details: <a href="https://www.ashg.org/meetings/2022-annual-meeting/" target="_blank">The American Society of Human Genetics 2022 Annual Meeting</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2022/09/ASHG2022-PosterAbstracts.pdf" target="_blank">The American Society of Human Genetics 2022 Annual Meeting</a>
     date: 2022
   - name: Reviewers’ Choice Abstract Award
-    details: <a href="https://www.ashg.org/meetings/2021meeting/" target="_blank">The American Society of Human Genetics 2021 Virtual Meeting</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2022/01/2021-ASHG-Meeting-Abstracts.pdf" target="_blank">The American Society of Human Genetics 2021 Virtual Meeting</a>
     date: 2021
-  - name: <a href="https://www.ashg.org/membership/awards/epstein/" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
+  - name: <a href="https://www.ashg.org/membership/awards/past-recipients/#epstein" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
     details: <a href="https://www.ashg.org/wp-content/uploads/2020/08/ASHG20-Epstein-trainee.pdf" target="_blank">Finalist (Predoctoral)</a>, <a href="https://www.ashg.org/meetings/2020meeting/" target="_blank">the American Society of Human Genetics 2020 Virtual Meeting</a>
     date: 2020
   - name: Reviewers’ Choice Abstract Award
-    details: <a href="https://www.ashg.org/meetings/2019meeting/" target="_blank">The American Society of Human Genetics 2019 Annual Meeting</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2019/10/ASHG-2019-poster-abstracts.pdf" target="_blank">The American Society of Human Genetics 2019 Annual Meeting</a>
     date: 2019
   - name: <a href="https://masason-foundation.org/en/" target="_blank">Masason Foundation Fellowship</a>
     details: Research Grant
@@ -30,20 +33,23 @@ en:
     details: Microsoft Imagine Cup 2010 Software Design Competition
     date: 2010
 ja:
+  - name: Reviewers’ Choice Abstract Award
+    details: <a href="https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf" target="_blank">アメリカ人類遺伝学会2025年大会</a>
+    date: 2025
   - name: Innovators Under 35 Japan
     details: <a href="https://www.technologyreview.jp/l/innovators_jp/348579/masahiro-kanai/" target="_blank">MIT Technology Review</a>
     date: 2024
   - name: Reviewers’ Choice Abstract Award
-    details: <a href="https://www.ashg.org/meetings/2022-annual-meeting/" target="_blank">アメリカ人類遺伝学会2022年大会</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2022/09/ASHG2022-PosterAbstracts.pdf" target="_blank">アメリカ人類遺伝学会2022年大会</a>
     date: 2022
   - name: Reviewers’ Choice Abstract Award
-    details: <a href="https://www.ashg.org/meetings/2021meeting/" target="_blank">アメリカ人類遺伝学会2021年大会</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2022/01/2021-ASHG-Meeting-Abstracts.pdf" target="_blank">アメリカ人類遺伝学会2021年大会</a>
     date: 2021
-  - name: <a href="https://www.ashg.org/membership/awards/epstein/" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
+  - name: <a href="https://www.ashg.org/membership/awards/past-recipients/#epstein" target="_blank">Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research</a>
     details: <a href="https://www.ashg.org/wp-content/uploads/2020/08/ASHG20-Epstein-trainee.pdf" target="_blank">Finalist (Predoctoral)</a>, <a href="https://www.ashg.org/meetings/2020meeting/" target="_blank">アメリカ人類遺伝学会2020年大会</a>
     date: 2020
   - name: Reviewers’ Choice Abstract Award
-    details: <a href="https://www.ashg.org/meetings/2019meeting/" target="_blank">アメリカ人類遺伝学会2019年大会</a>
+    details: <a href="https://www.ashg.org/wp-content/uploads/2019/10/ASHG-2019-poster-abstracts.pdf" target="_blank">アメリカ人類遺伝学会2019年大会</a>
     date: 2019
   - name: <a href="https://masason-foundation.org/" target="_blank">孫正義育英財団</a>
     details: 正財団生（研究費助成）
