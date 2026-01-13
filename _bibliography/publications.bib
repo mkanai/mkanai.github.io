@@ -1,13 +1,31 @@
+@article{Rossen2026,
+author = {#Rossen, Jordan and Shi, Huwenbo and Strober, Benjamin J and Zhang, Martin Jinye and Kanai, Masahiro and McCaw, Zachary R and Liang, Liming and Weissbrod, Omer and #Price, Alkes L},
+doi = {10.1038/s41588-025-02450-5},
+journal = {Nature Genetics},
+month = {jan},
+title = {{MultiSuSiE} improves multi-ancestry fine-mapping in All of Us whole-genome sequencing data},
+year = {2026},
+abstract = {Leveraging multi-ancestry data can improve fine-mapping power. We propose MultiSuSiE, an extension of Sum of Single Effects (SuSiE), to multiple ancestries that allows causal effect sizes to vary across ancestries. We evaluated MultiSuSiE using whole-genome sequencing data from 47,000 African-ancestry, 36,000 Latino-ancestry and 116,000 European-ancestry individuals from All of Us. In simulations, MultiSuSiE applied to Afr36k + Lat36k + Eur36k was well-calibrated and attained higher power than SuSiE applied to Eur109k; compared to recent multi-ancestry methods (SuSiEx and MESuSiE), MultiSuSiE attained higher power and lower computational cost. In analyses of 14 quantitative traits, MultiSuSiE applied to Afr47k + Lat36k + Eur116k identified 348 fine-mapped variants with posterior inclusion probability (PIP) > 0.9, and MultiSuSiE applied to Afr36k + Lat36k + Eur36k identified 59\% more PIP > 0.9 variants than SuSiE applied to Eur109k; MultiSuSiE identified 29\% more PIP > 0.9 variants than SuSiEx, and MESuSiE was not included due to its high computational cost. We validated these findings through functional enrichment of fine-mapped variants and highlighted examples implicating biologically plausible fine-mapped variants.},
+code = {https://github.com/jordanero/MultiSuSiE},
+data = {https://doi.org/10.5281/zenodo.17370173},
+medrxiv = {10.1101/2024.05.13.24307291},
+pdf = {https://rdcu.be/eYVdf},
+pubmed = {41491094}
+}
 @article{Jacobs2025,
 author = {Jacobs, Hannah N and Gorissen, Bram L and Guez, Jeremy and Kanai, Masahiro and Gupta, Kavi and Finucane, Hilary K and Karczewski, Konrad J and #Burge, Christopher B},
+doi = {10.1038/s41467-025-65476-7},
 journal = {Nature Communications},
 month = {dec},
-doi = {10.1038/s41467-025-65476-7},
+number = {1},
+pages = {11345},
 title = {Widespread naturally variable human exons aid genetic interpretation},
+volume = {16},
 year = {2025},
-abstract = {Most mammalian genes undergo alternative splicing. The splicing of some exons has been acquired or lost in specific mammalian lineages, but differences in splicing within the human population are poorly understood. Using GTEx tissue transcriptomes from 838 individuals, we identified 57,271 “naturally variable exons” (NVEs) – exons which are included in mRNAs in some individuals but entirely excluded from others (or vice versa). NVEs impact three quarters of protein-coding genes, occur at all population frequencies, and are often absent from reference annotations. NVEs are more abundant in genes depleted of genetic loss-of-function mutations and aid in the interpretation of causal genetic variants. Genetic variants modulate the splicing of many NVEs, and 5’ untranslated region and coding-region NVEs are often associated with increased and decreased gene expression, respectively. Together, our findings characterize abundant splicing variation in the human population, with implications for a range of human genetic analyses. Most human genes undergo alternative splicing, but population-level variation is poorly understood. Here, the authors map over 57,000 naturally variable exons across 838 individuals, revealing widespread splicing diversity and its impact on gene expression and genetic interpretation.},
+abstract = {Most mammalian genes undergo alternative splicing. The splicing of some exons has been acquired or lost in specific mammalian lineages, but differences in splicing within the human population are poorly understood. Using GTEx tissue transcriptomes from 838 individuals, we identified 57,271 ``naturally variable exons'' (NVEs) - exons which are included in mRNAs in some individuals but entirely excluded from others (or vice versa). NVEs impact three quarters of protein-coding genes, occur at all population frequencies, and are often absent from reference annotations. NVEs are more abundant in genes depleted of genetic loss-of-function mutations and aid in the interpretation of causal genetic variants. Genetic variants modulate the splicing of many NVEs, and 5' untranslated region and coding-region NVEs are often associated with increased and decreased gene expression, respectively. Together, our findings characterize abundant splicing variation in the human population, with implications for a range of human genetic analyses.},
 biorxiv = {10.1101/2024.09.09.612029},
-pdf = {https://rdcu.be/eUUVt}
+pdf = {https://rdcu.be/eUUVt},
+pubmed = {41402286}
 }
 @article{Kanai2025,
 author = {Kanai, Masahiro and Delorey, Toni M and Honkanen, Jarno and Rodosthenous, Rodosthenis S and Juvila, Julianna and Murphy, Shane and Teixeira-Soldano, Isabella and Hwang, Hee Seung and Karjalainen, Juha and Halonen, Jussi and Panagiotaropoulou, Georgia and Zhang, Yuanxiang and McCabe, Cristin and Chen, Eric and Nanki, Kosaku and Yoshida, Toshimi and Liu, Kai and Glean, Marla and Mehrotra, Nitya and Finan, Emily P and Chafamo, Daniel and Zhu, Yixiao and Arvas, Mikko and Ruotsalainen, Sanni and Zheng, Zhili and {FinnGen} and Reeve, Mary P and Kurki, Mitja and Porter, Caroline B M and Ashenberg, Orr and Zhou, Wei and Pitkänen, Kimmo and Partanen, Jukka and Palotie, Aarno and Graham, Daniel B and #Daly, Mark J and #Xavier, Ramnik J},
@@ -197,18 +215,6 @@ keywords = {preprint},
 abstract = {Understanding the genetic basis of gene expression can help us understand the molecular underpinnings of human traits and disease. Expression quantitative trait locus (eQTL) mapping can help in studying this relationship but have been shown to be very cell-type specific, motivating the use of single-cell RNA sequencing and single-cell eQTLs to obtain a more granular view of genetic regulation. Current methods for single-cell eQTL mapping either rely on the pseudobulk approach and traditional pipelines for bulk transcriptomics or do not scale well to large datasets. Here, we propose SAIGE-QTL, a robust and scalable tool that can directly map eQTLs using single-cell profiles without needing aggregation at the pseudobulk level. Additionally, SAIGE-QTL allows for testing the effects of less frequent/rare genetic variation through set-based tests, which is traditionally excluded from eQTL mapping studies. We evaluate the performance of SAIGE-QTL on both real and simulated data and demonstrate the improved power for eQTL mapping over existing pipelines.},
 code = {https://github.com/weizhou0/qtl},
 data = {https://zenodo.org/records/10811106}
-}
-@article{Rossen2024,
-author = {#Rossen, Jordan and Shi, Huwenbo and Strober, Benjamin J and Zhang, Martin Jinye and Kanai, Masahiro and McCaw, Zachary R and Liang, Liming and Weissbrod, Omer and #Price, Alkes L},
-doi = {10.1101/2024.05.13.24307291},
-journal = {medRxiv},
-month = {may},
-title = {{MultiSuSiE} improves multi-ancestry fine-mapping in All of Us whole-genome sequencing data},
-year = {2024},
-keywords = {preprint},
-abstract = {Leveraging data from multiple ancestries can greatly improve fine-mapping power due to differences in linkage disequilibrium and allele frequencies. We propose MultiSuSiE, an extension of the sum of single effects model (SuSiE) to multiple ancestries that allows causal effect sizes to vary across ancestries based on a multivariate normal prior informed by empirical data. We evaluated MultiSuSiE via simulations and analyses of 14 quantitative traits leveraging whole-genome sequencing data in 47k African-ancestry and 94k European-ancestry individuals from All of Us. In simulations, MultiSuSiE applied to Afr47k+Eur47k was well-calibrated and attained higher power than SuSiE applied to Eur94k; interestingly, higher causal variant PIPs in Afr47k compared to Eur47k were entirely explained by differences in the extent of LD quantified by LD 4th moments. Compared to very recently proposed multi-ancestry fine-mapping methods, MultiSuSiE attained higher power and/or much lower computational costs, making the analysis of large-scale All of Us data feasible. In real trait analyses, MultiSuSiE applied to Afr47k+Eur94k identified 579 fine-mapped variants with PIP > 0.5, and MultiSuSiE applied to Afr47k+Eur47k identified 44\% more fine-mapped variants with PIP > 0.5 than SuSiE applied to Eur94k. We validated MultiSuSiE results for real traits via functional enrichment of fine-mapped variants. We highlight several examples where MultiSuSiE implicates well-studied or biologically plausible fine-mapped variants that were not implicated by other methods.},
-code = {https://github.com/jordanero/MultiSuSiE},
-data = {https://zenodo.org/records/11111186}
 }
 @article{Layla2024,
 author = {Siraj, Layla and Castro, Rodrigo I and Dewey, Hannah and Kales, Susan and Nguyen, Thanh Thanh L and Kanai, Masahiro and Berenzy, Daniel and Mouri, Kousuke and Wang, Qingbo and McCaw, Zachary R and Gosai, Sager J and Aguet, Fran{\c c}ois and Cui, Ran and Vockley, Christopher M and Lareau, Caleb A and Okada, Yukinori and Gusev, Alexander and Jones, Thouis R and Lander, Eric S and Sabeti, Pardis C and Finucane, Hilary K and Reilly, Steven K and #Ulirsch, Jacob C and #Tewhey, Ryan},
